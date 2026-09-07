@@ -4,10 +4,12 @@
   <h1>RÉGULATEUR THERMIQUE CONNECTÉ</h1>
   <h3>Supervision en temps réel et commande manuelle du ventilateur via Bluetooth</h3>
   <p>
-    <strong>Groupe n°5 de la vague 1 (Smart Innovators) — Centre de Formation Max_Adis</strong>
+    <strong>Groupe n°5 (Smart Innovators) : FADONOUGBO Anselme · HOUNKOKOE Trifène · KINDOMISSI Achille</strong><br/>
+    <em>Formation Professionnelle Max_Adis 2026 · Porto-Novo, Bénin</em>
   </p>
   <p>
     <a href="https://maxadis-thermo-control.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Site_Web_Live-maxadis--thermo--control.vercel.app-0072CE?style=for-the-badge&logo=vercel&logoColor=white" alt="Site Web Live Vercel"></a>
+    <a href="assets/ThermoControl_BT.apk"><img src="https://img.shields.io/badge/Application_APK-8.2_Mo-10B981?style=for-the-badge&logo=android&logoColor=white" alt="Télécharger APK"></a>
   </p>
   <p>
     <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Plateforme-Arduino_Uno-0072CE.svg?style=flat-square" alt="Platform"></a>
@@ -38,6 +40,8 @@ Ce projet consiste à concevoir un système capable de mesurer la température a
 ├── 📁 firmware/               # Code source embarqué Arduino (.ino)
 ├── 📄 .gitignore              # Fichiers ignorés standard
 ├── 📄 index.html              # Site web vitrine & simulateur interactif (déploiement Vercel)
+├── 📄 robots.txt              # Directives d'indexation pour robots Google/Bing
+├── 📄 sitemap.xml             # Plan de site XML pour indexation moteurs de recherche
 └── 📄 README.md               # Documentation technique complète
 ```
 

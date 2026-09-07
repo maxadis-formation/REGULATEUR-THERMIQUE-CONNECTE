@@ -1,19 +1,144 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth" itemscope itemtype="https://schema.org/TechArticle">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>ThermoControl BT — Régulateur Thermique Connecté</title>
     
-    <!-- Métadonnées & SEO -->
-    <meta name="description" content="Documentation complète et site officiel du Régulateur Thermique Connecté avec supervision et commande manuelle du ventilateur (Groupe n°5 Smart Innovators - Max_Adis).">
-    <meta name="author" content="Groupe 5 (Smart Innovators) - Max_Adis">
+    <!-- Titre & SEO Référencement Google -->
+    <title>ThermoControl BT — Régulateur Thermique Connecté | FADONOUGBO, HOUNKOKOE, KINDOMISSI (Max_Adis)</title>
+    
+    <!-- Métadonnées & Moteurs de Recherche -->
+    <meta name="description" content="Site officiel et simulateur du Régulateur Thermique Connecté par FADONOUGBO Anselme, HOUNKOKOE Trifène et KINDOMISSI Achille (Groupe 5 Smart Innovators - Centre de Formation Max_Adis Porto-Novo). Supervision Bluetooth, capteur DHT11, Arduino Uno et application mobile Android (APK).">
+    <meta name="author" content="FADONOUGBO Anselme, HOUNKOKOE Trifène, KINDOMISSI Achille — Groupe n°5 (Smart Innovators) - Max_Adis">
+    <meta name="keywords" content="FADONOUGBO Anselme, HOUNKOKOE Trifène, KINDOMISSI Achille, Max_Adis, ThermoControl BT, Régulateur Thermique Connecté, Smart Innovators, Formation Max_Adis 2026, Porto-Novo, Bénin, Arduino Uno, DHT11, HC-05, MIT App Inventor, IoT, Domotique, Régulation thermique, ventilation automatique">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="geo.region" content="BJ">
+    <meta name="geo.placename" content="Porto-Novo">
     <link rel="canonical" href="https://maxadis-thermo-control.vercel.app/">
-    <meta property="og:title" content="ThermoControl BT — Régulateur Thermique Connecté">
-    <meta property="og:description" content="Supervision continue de la température et régulation automatique de ventilation via liaison Bluetooth.">
+    
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:site_name" content="ThermoControl BT — Max_Adis Formation">
+    <meta property="og:title" content="ThermoControl BT — Régulateur Thermique Connecté (Smart Innovators)">
+    <meta property="og:description" content="Supervision continue de la température et régulation automatique de ventilation via liaison Bluetooth. Réalisé par FADONOUGBO Anselme, HOUNKOKOE Trifène et KINDOMISSI Achille.">
     <meta property="og:url" content="https://maxadis-thermo-control.vercel.app/">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://maxadis-thermo-control.vercel.app/assets/vu_exterieur.jpeg">
+    <meta property="og:image:alt" content="Maquette du Régulateur Thermique Connecté - Groupe 5 Smart Innovators">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ThermoControl BT — Régulateur Thermique Connecté">
+    <meta name="twitter:description" content="Supervision continue de la température et régulation automatique de ventilation via liaison Bluetooth. Max_Adis 2026.">
+    <meta name="twitter:image" content="https://maxadis-thermo-control.vercel.app/assets/vu_exterieur.jpeg">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
+
+    <!-- Données Structurées JSON-LD pour Indexation Google Instantanée -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://maxadis-thermo-control.vercel.app/#article",
+          "headline": "ThermoControl BT — Régulateur Thermique Connecté",
+          "name": "Régulateur thermique connecté avec supervision et commande manuelle du ventilateur",
+          "description": "Projet de régulation thermique connectée avec Arduino Uno, capteur DHT11, module Bluetooth HC-05 et application mobile Android développée sous MIT App Inventor.",
+          "inLanguage": "fr-FR",
+          "url": "https://maxadis-thermo-control.vercel.app/",
+          "image": "https://maxadis-thermo-control.vercel.app/assets/vu_exterieur.jpeg",
+          "datePublished": "2026-09-01T08:00:00+01:00",
+          "dateModified": "2026-09-07T12:00:00+01:00",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "FADONOUGBO Anselme",
+              "jobTitle": "Étudiant en GE/SI · Concepteur & Développeur IoT",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            },
+            {
+              "@type": "Person",
+              "name": "HOUNKOKOE Trifène",
+              "jobTitle": "Étudiante en GE/SI · Conceptrice & Intégratrice Système",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            },
+            {
+              "@type": "Person",
+              "name": "KINDOMISSI Achille",
+              "jobTitle": "Lycéen en EL · Concepteur & Développeur Mobile",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            }
+          ],
+          "publisher": {
+            "@type": "EducationalOrganization",
+            "name": "Centre de Formation Max_Adis",
+            "url": "https://maxadis-thermo-control.vercel.app/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://maxadis-thermo-control.vercel.app/assets/logo.jpg"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Porto-Novo",
+              "addressCountry": "Bénin"
+            }
+          },
+          "keywords": "FADONOUGBO Anselme, HOUNKOKOE Trifène, KINDOMISSI Achille, Smart Innovators, Max_Adis, ThermoControl BT, régulateur thermique connecté, Arduino Uno, DHT11, HC-05, MIT App Inventor, Porto-Novo, Bénin, IoT, Domotique"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "ThermoControl BT",
+          "operatingSystem": "Android",
+          "applicationCategory": "UtilitiesApplication",
+          "downloadUrl": "https://maxadis-thermo-control.vercel.app/assets/ThermoControl_BT.apk",
+          "fileSize": "8.2MB",
+          "author": {
+            "@type": "Organization",
+            "name": "Groupe n°5 Smart Innovators (FADONOUGBO Anselme, HOUNKOKOE Trifène, KINDOMISSI Achille)"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Centre de Formation Max_Adis",
+          "url": "https://maxadis-thermo-control.vercel.app/",
+          "email": "maxadisorg@gmail.com",
+          "telephone": "+2290154116425",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto-Novo",
+            "addressCountry": "Bénin"
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Typographie Professionnelle Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2098,25 +2223,25 @@
             </div>
 
             <div class="team-grid">
-                <div class="team-card">
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <div class="avatar-box">FA</div>
-                    <div class="team-name">FADONOUGBO Anselme</div>
-                    <div class="team-role">Etudiant en GE/SI</div>
-                    <div class="team-group">Groupe n°5 · Smart Innovators</div>
+                    <div class="team-name" itemprop="name">FADONOUGBO Anselme</div>
+                    <div class="team-role" itemprop="jobTitle">Étudiant en GE/SI · Concepteur IoT</div>
+                    <div class="team-group" itemprop="affiliation">Groupe n°5 · Smart Innovators (Max_Adis)</div>
                 </div>
 
-                <div class="team-card">
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <div class="avatar-box">HT</div>
-                    <div class="team-name">HOUNKOKOE Trifène</div>
-                    <div class="team-role">Etudiante en GE/SI</div>
-                    <div class="team-group">Groupe n°5 · Smart Innovators</div>
+                    <div class="team-name" itemprop="name">HOUNKOKOE Trifène</div>
+                    <div class="team-role" itemprop="jobTitle">Étudiante en GE/SI · Conceptrice Système</div>
+                    <div class="team-group" itemprop="affiliation">Groupe n°5 · Smart Innovators (Max_Adis)</div>
                 </div>
 
-                <div class="team-card">
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <div class="avatar-box">KA</div>
-                    <div class="team-name">KINDOMISSI Achille</div>
-                    <div class="team-role">Lycéen en EL</div>
-                    <div class="team-group">Groupe n°5 · Smart Innovators</div>
+                    <div class="team-name" itemprop="name">KINDOMISSI Achille</div>
+                    <div class="team-role" itemprop="jobTitle">Lycéen en EL · Concepteur Mobile</div>
+                    <div class="team-group" itemprop="affiliation">Groupe n°5 · Smart Innovators (Max_Adis)</div>
                 </div>
             </div>
         </div>
