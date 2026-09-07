@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
-Sitemap: https://maxadis-thermo-control.vercel.app/sitemap.xml
+Sitemap: https://maxadis-thermocontrol-bt.vercel.app/sitemap.xml

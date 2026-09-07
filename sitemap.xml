@@ -1,30 +1,30 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://maxadis-thermo-control.vercel.app/</loc>
+    <loc>https://maxadis-thermocontrol-bt.vercel.app/</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://maxadis-thermo-control.vercel.app/assets/vu_exterieur.jpeg</image:loc>
+      <image:loc>https://maxadis-thermocontrol-bt.vercel.app/assets/vu_exterieur.jpeg</image:loc>
       <image:title>Maquette finale du Régulateur Thermique Connecté - Groupe 5 Smart Innovators</image:title>
       <image:caption>Régulateur thermique connecté conçu par FADONOUGBO Anselme, HOUNKOKOE Trifène et KINDOMISSI Achille au Centre Max_Adis</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://maxadis-thermo-control.vercel.app/assets/logo.jpg</image:loc>
+      <image:loc>https://maxadis-thermocontrol-bt.vercel.app/assets/logo.jpg</image:loc>
       <image:title>Logo officiel ThermoControl BT Max_Adis</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://maxadis-thermo-control.vercel.app/assets/composants.png</image:loc>
+      <image:loc>https://maxadis-thermocontrol-bt.vercel.app/assets/composants.png</image:loc>
       <image:title>Nomenclature et composants électroniques Arduino DHT11 HC-05</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://maxadis-thermo-control.vercel.app/assets/montage_breadboard.png</image:loc>
+      <image:loc>https://maxadis-thermocontrol-bt.vercel.app/assets/montage_breadboard.png</image:loc>
       <image:title>Montage sur breadboard du circuit prototype</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://maxadis-thermo-control.vercel.app/assets/interface_mobile.png</image:loc>
+      <image:loc>https://maxadis-thermocontrol-bt.vercel.app/assets/interface_mobile.png</image:loc>
       <image:title>Application mobile ThermoControl BT développée sous MIT App Inventor</image:title>
     </image:image>
   </url>

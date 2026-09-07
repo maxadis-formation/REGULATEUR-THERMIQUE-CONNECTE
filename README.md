@@ -8,7 +8,7 @@
     <em>Formation Professionnelle Max_Adis 2026 · Porto-Novo, Bénin</em>
   </p>
   <p>
-    <a href="https://maxadis-thermo-control.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Site_Web_Live-maxadis--thermo--control.vercel.app-0072CE?style=for-the-badge&logo=vercel&logoColor=white" alt="Site Web Live Vercel"></a>
+    <a href="https://maxadis-thermocontrol-bt.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Site_Web_Live-maxadis--thermo--control.vercel.app-0072CE?style=for-the-badge&logo=vercel&logoColor=white" alt="Site Web Live Vercel"></a>
     <a href="assets/ThermoControl_BT.apk"><img src="https://img.shields.io/badge/Application_APK-8.2_Mo-10B981?style=for-the-badge&logo=android&logoColor=white" alt="Télécharger APK"></a>
   </p>
   <p>
@@ -20,7 +20,7 @@
   </p>
 </div>
 
-> 🌐 **Accéder au Site Web & Simulateur Interactif en Ligne :** [https://maxadis-thermo-control.vercel.app/](https://maxadis-thermo-control.vercel.app/)
+> 🌐 **Accéder au Site Web & Simulateur Interactif en Ligne :** [https://maxadis-thermocontrol-bt.vercel.app/](https://maxadis-thermocontrol-bt.vercel.app/)
 
 <br/>
 
@@ -294,7 +294,7 @@ Vous souhaitez concevoir ou réaliser un projet similaire en **IoT, systèmes em
 * **Email :** [maxadisorg@gmail.com](mailto:maxadisorg@gmail.com)
 * **Téléphone / WhatsApp :** [+229 01 54 11 64 25](tel:+2290154116425)
 * **Organisation GitHub :** [https://github.com/maxadis-formation](https://github.com/maxadis-formation)
-* **Site Web Officiel & Démo Live :** [https://maxadis-thermo-control.vercel.app/](https://maxadis-thermo-control.vercel.app/)
+* **Site Web Officiel & Démo Live :** [https://maxadis-thermocontrol-bt.vercel.app/](https://maxadis-thermocontrol-bt.vercel.app/)
 * **Dépôt Officiel du Projet :** [https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE](https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE)
 
 > *« Vos avis et retours comptent énormément ! N'hésitez pas à nous écrire pour toute suggestion d'amélioration ou collaboration. »*
