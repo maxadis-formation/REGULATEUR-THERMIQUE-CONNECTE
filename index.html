@@ -2147,62 +2147,12 @@
     <!-- SECTION 7 : ÉTAPE 6 DU PDF — VALIDATION DES TESTS -->
     <section id="tests">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header" style="margin-bottom: 0;">
                 <span class="section-tag">Étape 6 du Rapport</span>
                 <h2 class="section-title">Tests du Système et Validation Fonctionnelle</h2>
-                <p style="margin-top: 0.5rem;">
-                    Tableau de validation des 6 fonctions clés testées et approuvées en laboratoire.
+                <p style="margin-top: 1.25rem; max-width: 820px; margin-left: auto; margin-right: auto; line-height: 1.85; font-size: 1.05rem; color: var(--text-body);">
+                    L'ensemble des fonctionnalités clés du système a été testé et approuvé avec succès en laboratoire : la communication sans fil Bluetooth HC-05, l'acquisition précise et l'affichage en direct de la température via le capteur DHT11, le réglage dynamique de seuil de consigne, la régulation thermique automatique ainsi que la commande manuelle forcée et la gestion sécurisée des modes de fonctionnement.
                 </p>
-            </div>
-
-            <div class="test-grid">
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Connexion Bluetooth</div>
-                        <div class="test-desc">L'application se connecte correctement au module HC-05</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
-
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Réception de la Température</div>
-                        <div class="test-desc">La valeur affichée correspond à la mesure réelle du DHT11</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
-
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Réglage du Seuil Dynamique</div>
-                        <div class="test-desc">Le curseur modifie le seuil en temps réel sans redémarrage</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
-
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Mode Automatique</div>
-                        <div class="test-desc">Le ventilateur s'active au dépassement et s'arrête en dessous</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
-
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Mode Manuel Forcé</div>
-                        <div class="test-desc">Les boutons Marche / Arrêt commandent directement le ventilateur</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
-
-                <div class="test-card">
-                    <div>
-                        <div class="test-title">Sécurité des Modes</div>
-                        <div class="test-desc">Une alerte s'affiche si une commande manuelle est tentée en auto</div>
-                    </div>
-                    <span class="badge-valid">Validé</span>
-                </div>
             </div>
         </div>
     </section>
