@@ -44,6 +44,7 @@
             --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
             --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
             --shadow-hero: 0 25px 50px -12px rgba(0, 114, 206, 0.16);
+            --shadow-dropdown: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -80,7 +81,7 @@
         }
 
         /* -------------------------------------------------------------
-           BARRE DE NAVIGATION ÉPURÉE & AÉRÉE (STYLE MINIMALISTE)
+           BARRE DE NAVIGATION : 3 ÉLÉMENTS ÉPURÉS AVEC MENU DÉROULANT
         ------------------------------------------------------------- */
         .navbar {
             position: sticky;
@@ -90,7 +91,7 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
-            padding: 1.1rem 0;
+            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
@@ -151,19 +152,135 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 2.2rem;
         }
 
-        .nav-links a {
+        .nav-link-direct {
             color: var(--text-body);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
             transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
+        .nav-link-direct:hover {
             color: var(--primary-blue);
+        }
+
+        /* Menu Déroulant 3ème Élément */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-trigger {
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            color: var(--text-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            cursor: pointer;
+            padding: 0.4rem 0.2rem;
+            transition: color 0.2s ease;
+        }
+
+        .dropdown-trigger:hover, .nav-dropdown:hover .dropdown-trigger {
+            color: var(--primary-blue);
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: -80px;
+            width: 320px;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 0.85rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-dropdown);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.65rem 0.85rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-title);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--sky-blue-light);
+            transform: translateX(3px);
+        }
+
+        .dropdown-item-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--bg-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+            transition: background 0.2s ease;
+        }
+
+        .dropdown-item:hover .dropdown-item-icon {
+            background: #ffffff;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .dropdown-item-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-title);
+            line-height: 1.2;
+        }
+
+        .dropdown-item-desc {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .dropdown-item.highlight {
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            margin-top: 0.3rem;
+        }
+
+        .dropdown-item.highlight:hover {
+            background: #e0f2fe;
         }
 
         .btn-github {
@@ -188,7 +305,7 @@
         }
 
         /* -------------------------------------------------------------
-           HERO SECTION ÉPURÉE, AÉRÉE & DISTINCTE (SANS SURCHARGE)
+           HERO SECTION ÉPURÉE, AÉRÉE & DISTINCTE
         ------------------------------------------------------------- */
         .hero-section {
             padding: 5rem 0 4rem 0;
@@ -1144,16 +1261,18 @@
             .team-grid { grid-template-columns: 1fr; }
             .test-grid { grid-template-columns: 1fr; }
             .support-grid { grid-template-columns: 1fr; }
+            .dropdown-menu { right: 0; }
         }
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2.4rem; }
-            .nav-links { display: none; }
+            .nav-links { gap: 1.2rem; }
             .hero-actions { flex-direction: column; width: 100%; }
             .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
             .hero-img-frame img { height: 280px; }
             .simulator-panel { padding: 1.5rem; }
             .btn-scroll-top { bottom: 1.25rem; right: 1.25rem; width: 42px; height: 42px; }
+            .dropdown-menu { width: 280px; right: -40px; }
         }
     </style>
 </head>
@@ -1166,7 +1285,7 @@
         </svg>
     </button>
 
-    <!-- BARRE DE NAVIGATION MODERNE & AÉRÉE -->
+    <!-- BARRE DE NAVIGATION : 3 ÉLÉMENTS ÉPURÉS AVEC MENU DÉROULANT -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand-logo">
@@ -1177,15 +1296,90 @@
                 </div>
             </a>
 
+            <!-- 3 Éléments Principaux de Navigation -->
             <div class="nav-links">
-                <a href="#presentation">Présentation</a>
-                <a href="#fonctionnement">Fonctionnement</a>
-                <a href="#materiels">Matériels</a>
-                <a href="#etapes">8 Étapes</a>
-                <a href="#simulateur">Simulateur</a>
-                <a href="#tests">Validation</a>
-                <a href="#equipe">Équipe</a>
-                <a href="#support">Contact & Support</a>
+                <!-- Élément 1 : Accueil -->
+                <a href="#" class="nav-link-direct">Accueil</a>
+
+                <!-- Élément 2 : Présentation -->
+                <a href="#presentation" class="nav-link-direct">Présentation</a>
+
+                <!-- Élément 3 : Menu Déroulant (Sections & Fonctionnalités) -->
+                <div class="nav-dropdown">
+                    <button class="dropdown-trigger" aria-haspopup="true">
+                        <span>Explorer le Système</span>
+                        <svg class="dropdown-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#simulateur" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Simulateur Live</div>
+                                <div class="dropdown-item-desc">Tester la régulation thermique en direct</div>
+                            </div>
+                        </a>
+                        <a href="#fonctionnement" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Fonctionnement</div>
+                                <div class="dropdown-item-desc">Les 9 étapes coordonnées du système</div>
+                            </div>
+                        </a>
+                        <a href="#materiels" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Nomenclature Matérielle</div>
+                                <div class="dropdown-item-desc">Liste des composants & rôles</div>
+                            </div>
+                        </a>
+                        <a href="#etapes" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">8 Étapes de Conception</div>
+                                <div class="dropdown-item-desc">De l'étude du besoin à la maquette</div>
+                            </div>
+                        </a>
+                        <a href="#tests" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Validation des Tests</div>
+                                <div class="dropdown-item-desc">6 fonctions validées en laboratoire</div>
+                            </div>
+                        </a>
+                        <a href="#equipe" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Équipe & Concepteurs</div>
+                                <div class="dropdown-item-desc">Groupe n°5 Smart Innovators</div>
+                            </div>
+                        </a>
+                        <a href="#support" class="dropdown-item highlight">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Contact & Support</div>
+                                <div class="dropdown-item-desc">Assistance technique & partenariats</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bouton GitHub -->
                 <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE" target="_blank" class="btn-github">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/>
