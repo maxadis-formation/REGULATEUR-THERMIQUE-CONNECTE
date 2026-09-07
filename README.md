@@ -7,6 +7,9 @@
     <strong>Groupe n°5 de la vague 1 (Smart Innovators) — Centre de Formation Max_Adis</strong>
   </p>
   <p>
+    <a href="https://maxadis-thermo-control.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Site_Web_Live-maxadis--thermo--control.vercel.app-0072CE?style=for-the-badge&logo=vercel&logoColor=white" alt="Site Web Live Vercel"></a>
+  </p>
+  <p>
     <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Plateforme-Arduino_Uno-0072CE.svg?style=flat-square" alt="Platform"></a>
     <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Sonde-DHT11_Numérique-F97316.svg?style=flat-square" alt="Sensor"></a>
     <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Liaison-Bluetooth_HC--05-38BDF8.svg?style=flat-square" alt="Bluetooth"></a>
@@ -14,6 +17,8 @@
     <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Statut-Terminé_&_Validé-success.svg?style=flat-square" alt="Status"></a>
   </p>
 </div>
+
+> 🌐 **Accéder au Site Web & Simulateur Interactif en Ligne :** [https://maxadis-thermo-control.vercel.app/](https://maxadis-thermo-control.vercel.app/)
 
 <br/>
 
@@ -276,6 +281,7 @@ Vous souhaitez concevoir ou réaliser un projet similaire en **IoT, systèmes em
 * **Email :** [maxadisorg@gmail.com](mailto:maxadisorg@gmail.com)
 * **Téléphone / WhatsApp :** [+229 01 54 11 64 25](tel:+2290154116425)
 * **Organisation GitHub :** [https://github.com/maxadis-formation](https://github.com/maxadis-formation)
+* **Site Web Officiel & Démo Live :** [https://maxadis-thermo-control.vercel.app/](https://maxadis-thermo-control.vercel.app/)
 * **Dépôt Officiel du Projet :** [https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE](https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE)
 
 > *« Vos avis et retours comptent énormément ! N'hésitez pas à nous écrire pour toute suggestion d'amélioration ou collaboration. »*
