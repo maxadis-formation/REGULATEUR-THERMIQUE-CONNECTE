@@ -7,11 +7,11 @@
     <strong>Groupe n°5 de la vague 1 (Smart Innovators) — Centre de Formation Max_Adis</strong>
   </p>
   <p>
-    <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Plateforme-Arduino_Uno-0072CE.svg?style=flat-square" alt="Platform"></a>
-    <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Sonde-DHT11_Numérique-F97316.svg?style=flat-square" alt="Sensor"></a>
-    <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Liaison-Bluetooth_HC--05-38BDF8.svg?style=flat-square" alt="Bluetooth"></a>
-    <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/App_Mobile-MIT_App_Inventor-E83524.svg?style=flat-square" alt="App Inventor"></a>
-    <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Statut-Terminé_&_Validé-success.svg?style=flat-square" alt="Status"></a>
+    <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Plateforme-Arduino_Uno-0072CE.svg?style=flat-square" alt="Platform"></a>
+    <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Sonde-DHT11_Numérique-F97316.svg?style=flat-square" alt="Sensor"></a>
+    <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Liaison-Bluetooth_HC--05-38BDF8.svg?style=flat-square" alt="Bluetooth"></a>
+    <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/App_Mobile-MIT_App_Inventor-E83524.svg?style=flat-square" alt="App Inventor"></a>
+    <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE"><img src="https://img.shields.io/badge/Statut-Terminé_&_Validé-success.svg?style=flat-square" alt="Status"></a>
   </p>
 </div>
 
