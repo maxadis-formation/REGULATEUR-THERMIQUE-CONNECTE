@@ -1818,98 +1818,70 @@
         </div>
     </section>
 
-    <!-- SECTION 5 : LES 8 ÉTAPES DE RÉALISATION DU PDF (AVEC PHOTOS) -->
+        <!-- SECTION 5 : LES 8 ÉTAPES DE RÉALISATION DU PDF (AVEC PHOTOS) -->
     <section id="etapes">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Processus Complet</span>
                 <h2 class="section-title">Les 8 Étapes de Réalisation du Projet</h2>
                 <p style="margin-top: 0.5rem;">
-                    Chronologie complète des étapes techniques décrites dans le rapport officiel.
+                    Détail chronologique et illustré de la mise en œuvre de la conception à la maquette finale.
                 </p>
             </div>
 
             <div class="etapes-showcase-grid">
-                <!-- Étape 1 : Choix des Matériels -->
+                <!-- Étape 1 & 2 : Étude & Composants -->
                 <div class="etape-card-full">
                     <div class="etape-img-wrap">
                         <img src="assets/composants.png" alt="Étude du besoin et choix des composants">
                     </div>
                     <div class="etape-body">
-                        <span class="etape-badge-num">Étape 1</span>
-                        <h3>Étude du Besoin & Choix des Matériels</h3>
+                        <span class="etape-badge-num">Étapes 1 & 2</span>
+                        <h3>Étude du Besoin & Choix des Composants</h3>
                         <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Définition précise du cahier des charges, analyse thermique et sélection rigoureuse des composants électroniques adaptés (DHT11, HC-05, Relais, Moteur CC).
+                            Analyse des contraintes climatiques : constat d'un manque de supervision dans les systèmes classiques, définition du cahier des charges et sélection ciblée des composants (Arduino Uno, DHT11, HC-05, relais optocouplé).
                         </p>
                     </div>
                 </div>
 
-                <!-- Étape 2 : Montage sur Breadboard -->
+                <!-- Étape 3 : Montage sur Breadboard -->
                 <div class="etape-card-full">
                     <div class="etape-img-wrap">
                         <img src="assets/montage_breadboard.png" alt="Montage sur plaque d'essai breadboard">
                     </div>
                     <div class="etape-body">
-                        <span class="etape-badge-num">Étape 2</span>
-                        <h3>Montage sur Plaque d'Essai (Breadboard)</h3>
+                        <span class="etape-badge-num">Étape 3</span>
+                        <h3>Montage sur Breadboard</h3>
                         <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Câblage méthodique des capteurs et actionneurs sans soudure. Vérification des continuités, des lignes d'alimentation 5V/GND et de la liaison série TX/RX.
+                            Câblage sans soudure du prototype. Connexion du capteur DHT11 sur la broche Pin 2, du relais sur Pin 3, et du module Bluetooth HC-05 sur les broches série logicielles Pin 10 (RX) et Pin 11 (TX).
                         </p>
                     </div>
                 </div>
 
-                <!-- Étape 3 : Programmation Arduino -->
+                <!-- Étape 4 : Programmation Arduino -->
                 <div class="etape-card-full">
                     <div class="etape-img-wrap">
                         <img src="assets/code_arduino_blocks.png" alt="Programmation Arduino C++">
                     </div>
                     <div class="etape-body">
-                        <span class="etape-badge-num">Étape 3</span>
-                        <h3>Programmation du Microcontrôleur Arduino</h3>
+                        <span class="etape-badge-num">Étape 4</span>
+                        <h3>Programmation de l'Arduino (C++)</h3>
                         <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Écriture de l'algorithme C++ avec gestion temporelle non bloquante via <code>millis()</code>, protocole série SoftwareSerial et asservissement de seuil de sécurité.
+                            Développement sous Arduino IDE avec temporisation non-bloquante via <code>millis()</code> (émission toutes les 1000 ms sans bloquer la boucle) et traitement des commandes <code>M1</code>, <code>M0</code>, <code>S&lt;seuil&gt;</code>, <code>A</code> et <code>B</code>.
                         </p>
                     </div>
                 </div>
 
-                <!-- Étape 4 : Application Mobile -->
+                <!-- Étape 5 : Application Mobile MIT App Inventor -->
                 <div class="etape-card-full">
                     <div class="etape-img-wrap">
                         <img src="assets/mit_app_inventor_blocks.png" alt="Blocs MIT App Inventor">
                     </div>
                     <div class="etape-body">
-                        <span class="etape-badge-num">Étape 4</span>
-                        <h3>Développement de l'Application Mobile (MIT)</h3>
-                        <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Création de l'interface graphique et logique événementielle par blocs (connexion BluetoothClient, réception des flux de température et émission des consignes).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Étape 5 : Intégration Matériel / Logiciel -->
-                <div class="etape-card-full">
-                    <div class="etape-img-wrap">
-                        <img src="assets/img_1.jpeg" alt="Intégration matériel et logiciel">
-                    </div>
-                    <div class="etape-body">
                         <span class="etape-badge-num">Étape 5</span>
-                        <h3>Intégration Matériel & Logiciel</h3>
+                        <h3>Développement Mobile (ThermoControl BT)</h3>
                         <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Mise en communication conjointe de la carte Arduino et du smartphone. Calibrage des fréquences d'émission pour assurer une parfaite synchronisation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Étape 6 : Tests & Validation -->
-                <div class="etape-card-full">
-                    <div class="etape-img-wrap">
-                        <img src="assets/img_2.jpeg" alt="Tests et validation en conditions réelles">
-                    </div>
-                    <div class="etape-body">
-                        <span class="etape-badge-num">Étape 6</span>
-                        <h3>Validation & Ajustements en Laboratoire</h3>
-                        <p style="font-size: 0.92rem; color: var(--text-body);">
-                            Tests fonctionnels approfondis de la portée Bluetooth, des temps de réponse du relais et fiabilisation du code face aux pertes de trames série.
+                            Création de l'application sous MIT App Inventor : module de sélection Bluetooth Client, potentiomètre tactile de seuil, boutons de commande forcée et affichage numérique de la télémétrie.
                         </p>
                     </div>
                 </div>
