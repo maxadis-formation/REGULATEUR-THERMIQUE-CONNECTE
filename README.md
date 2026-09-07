@@ -254,3 +254,17 @@ Projet réalisé par le **Groupe n°5 de la vague 1 (Smart Innovators)** :
 
 * **Organisation & Mentorat :** Centre de formation **Max_Adis** (*« Crée et contrôle tes propres systèmes intelligents »*) — Édition 2026.
 * **Lieu :** Porto-Novo, Bénin.
+
+---
+
+## 13. Contact, Support & Accompagnement de Projets
+
+Vous souhaitez concevoir ou réaliser un projet similaire en **IoT, systèmes embarqués ou électronique** ? Vous avez besoin d'une assistance technique ou d'un accompagnement sur-mesure pour vos prototypes et formations ?
+
+* **Email :** [maxadisorg@gmail.com](mailto:maxadisorg@gmail.com)
+* **Téléphone / WhatsApp :** [+229 01 54 11 64 25](tel:+2290154116425)
+* **Organisation GitHub :** [https://github.com/maxadis-formation](https://github.com/maxadis-formation)
+* **Dépôt Officiel du Projet :** [https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE](https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE)
+
+> *« Vos avis et retours comptent énormément ! N'hésitez pas à nous écrire pour toute suggestion d'amélioration ou collaboration. »*
+
