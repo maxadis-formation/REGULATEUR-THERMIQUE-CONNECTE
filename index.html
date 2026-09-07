@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThermoControl BT — Système de Régulation Thermique Connecté</title>
+    <title>ThermoControl BT — Régulateur Thermique Connecté</title>
     
     <!-- Métadonnées & SEO -->
-    <meta name="description" content="ThermoControl BT : Système intelligent de protection contre la surchauffe et de régulation thermique automatisée pour habitations, salles serveurs et serres.">
+    <meta name="description" content="Documentation complète et site officiel du Régulateur Thermique Connecté avec supervision et commande manuelle du ventilateur (Groupe n°5 Smart Innovators - Max_Adis).">
     <meta name="author" content="Groupe 5 (Smart Innovators) - Max_Adis">
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 
@@ -17,7 +17,7 @@
 
     <style>
         :root {
-            /* Palette Directe du Logo */
+            /* Palette Dérivée du Logo */
             --primary-blue: #0072CE;
             --primary-blue-dark: #00569e;
             --sky-blue: #38bdf8;
@@ -75,7 +75,7 @@
             padding: 0 2rem;
         }
 
-        /* Navbar Épurée & Lumineuse */
+        /* Navbar Épurée */
         .navbar {
             position: sticky;
             top: 0;
@@ -132,14 +132,14 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.75rem;
         }
 
         .nav-links a {
             color: var(--text-body);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             transition: color 0.2s ease;
         }
 
@@ -153,9 +153,9 @@
             gap: 0.55rem;
             background: linear-gradient(135deg, var(--primary-blue), #0284c7);
             color: #ffffff !important;
-            padding: 0.6rem 1.3rem;
+            padding: 0.55rem 1.25rem;
             border-radius: 999px;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 700;
             box-shadow: 0 4px 14px rgba(0, 114, 206, 0.25);
             transition: all 0.25s ease;
@@ -167,7 +167,7 @@
             background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
         }
 
-        /* Hero Section (Orientée Bénéfices & Utilité Réelle) */
+        /* Hero Section */
         header {
             padding: 5rem 0 4rem 0;
             position: relative;
@@ -209,7 +209,7 @@
         }
 
         h1 {
-            font-size: 3.3rem;
+            font-size: 3.2rem;
             font-weight: 800;
             letter-spacing: -0.03em;
             margin-bottom: 1.25rem;
@@ -223,11 +223,10 @@
         }
 
         .hero-lead {
-            font-size: 1.2rem;
+            font-size: 1.18rem;
             color: var(--text-body);
             margin-bottom: 2rem;
             line-height: 1.7;
-            font-weight: 450;
         }
 
         .hero-pills-row {
@@ -252,14 +251,9 @@
         }
 
         .hero-pill-value {
-            font-size: 1.02rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--text-title);
-        }
-
-        /* Image Hero avec Vitrine & Badge */
-        .hero-showcase {
-            position: relative;
         }
 
         .hero-img-card {
@@ -307,58 +301,14 @@
             color: var(--primary-blue);
         }
 
-        /* Section Valeur Ajoutée & Problématique */
-        .value-section {
-            padding: 4.5rem 0;
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+        /* Sections Générales */
+        section {
+            padding: 5rem 0;
         }
 
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2.5rem;
-        }
-
-        .value-card {
-            background: var(--bg-page);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2.25rem 1.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--primary-blue);
-            box-shadow: var(--shadow-card-hover);
-        }
-
-        .value-icon-box {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            background: var(--sky-blue-light);
-            border: 1px solid var(--sky-blue-border);
-            color: var(--primary-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-        }
-
-        .value-icon-box.orange {
-            background: var(--thermal-orange-light);
-            border-color: var(--thermal-orange-border);
-            color: var(--thermal-orange);
-        }
-
-        /* En-têtes de Sections */
         .section-header {
             text-align: center;
-            max-width: 760px;
+            max-width: 800px;
             margin: 0 auto 3.5rem auto;
         }
 
@@ -377,11 +327,227 @@
             letter-spacing: -0.02em;
         }
 
-        /* SIMULATEUR LIVE INTERACTIF */
-        .simulator-section {
-            padding: 5rem 0;
+        .bg-white-sec {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
+        /* 1. Problématique & Objectifs (2 Colonnes) */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .card-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.25rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 1.25rem;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-body);
+        }
+
+        .bullet-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        /* 2. Fonctionnement du Système (9 Étapes Chronologiques) */
+        .steps-flow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .flow-step-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .flow-step-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .flow-step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--sky-blue));
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.85rem;
+        }
+
+        /* 3. Nomenclature Matérielle */
+        .hardware-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+        }
+
+        .hardware-table th {
+            background: var(--sky-blue-light);
+            color: var(--primary-blue-dark);
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--sky-blue-border);
+        }
+
+        .hardware-table td {
+            padding: 0.95rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.92rem;
+        }
+
+        .hardware-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* 4. Les 8 Étapes de Réalisation (Showcase interactif avec Photos) */
+        .etapes-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .etape-card-full {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .etape-card-full:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .etape-img-wrap {
+            height: 250px;
+            overflow: hidden;
+            background: var(--bg-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .etape-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .etape-card-full:hover .etape-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .etape-body {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .etape-badge-num {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            margin-bottom: 0.6rem;
+            align-self: flex-start;
+        }
+
+        /* 5. Validation des Tests (Tableau Vert) */
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .test-card {
+            background: var(--bg-white);
+            border: 1px solid #bbf7d0;
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(34, 197, 94, 0.05);
+        }
+
+        .test-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-title);
+        }
+
+        .test-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .badge-valid {
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 800;
+            font-size: 0.8rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* 6. Simulateur Live */
         .simulator-panel {
             background: var(--bg-white);
             border: 2px solid var(--sky-blue-border);
@@ -427,7 +593,6 @@
             color: var(--thermal-orange);
         }
 
-        /* Slider Stylé */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -513,7 +678,6 @@
             color: var(--thermal-orange);
         }
 
-        /* Turbine / Ventilateur Interactif aux couleurs du Logo */
         .sim-fan-box {
             background: linear-gradient(135deg, var(--sky-blue-light) 0%, #ffffff 100%);
             border: 1px solid var(--sky-blue-border);
@@ -590,123 +754,7 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Cartes d'Architecture Matérielle */
-        .hardware-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .tech-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 2.25rem 1.75rem;
-            box-shadow: var(--shadow-card);
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            height: 100%;
-        }
-
-        .tech-card:hover {
-            border-color: var(--sky-blue);
-            box-shadow: var(--shadow-card-hover);
-        }
-
-        .tech-icon-wrap {
-            width: 54px;
-            height: 54px;
-            border-radius: 14px;
-            background: var(--sky-blue-light);
-            border: 1px solid var(--sky-blue-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-            color: var(--primary-blue);
-        }
-
-        .tech-icon-wrap.orange {
-            background: var(--thermal-orange-light);
-            border-color: var(--thermal-orange-border);
-            color: var(--thermal-orange);
-        }
-
-        .tech-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .tech-card p {
-            font-size: 0.92rem;
-            color: var(--text-body);
-            line-height: 1.6;
-        }
-
-        /* Section Intérieur Maquette (Image 2) */
-        .inside-section {
-            padding: 5rem 0;
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .inside-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .inside-img-card {
-            background: var(--bg-white);
-            padding: 10px;
-            border-radius: 24px;
-            border: 1px solid var(--sky-blue-border);
-            box-shadow: var(--shadow-card-hover);
-        }
-
-        .inside-img-card img {
-            width: 100%;
-            height: 390px;
-            object-fit: cover;
-            border-radius: 16px;
-            display: block;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.25rem;
-            background: var(--bg-page);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow-subtle);
-            transition: all 0.2s ease;
-        }
-
-        .feature-item:hover {
-            border-color: var(--primary-blue);
-            transform: translateX(4px);
-        }
-
-        .feature-num {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--sky-blue));
-            color: #ffffff;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-
-        /* ÉQUIPE & PARTICIPANTS (En bas de page) */
+        /* 7. Section Participants */
         .team-section {
             padding: 5.5rem 0 4.5rem 0;
             background: var(--bg-page);
@@ -797,23 +845,24 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .value-grid, .hardware-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero-grid, .inside-grid, .simulator-panel { grid-template-columns: 1fr; gap: 2.5rem; }
+            .steps-flow-grid, .etapes-showcase-grid, .grid-2 { grid-template-columns: 1fr; }
+            .hero-grid, .simulator-panel { grid-template-columns: 1fr; gap: 2.5rem; }
             .team-grid { grid-template-columns: 1fr; }
+            .test-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.35rem; }
             .nav-links { display: none; }
-            .hero-pills-row, .value-grid, .hardware-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .hero-img-card img, .inside-img-card img { height: 280px; }
+            .hero-pills-row { grid-template-columns: 1fr; gap: 1rem; }
+            .hero-img-card img { height: 280px; }
             .simulator-panel { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Barre de Navigation Lumineuse -->
+    <!-- Barre de Navigation -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand-logo">
@@ -823,57 +872,59 @@
             </a>
 
             <div class="nav-links">
-                <a href="#utilite">Utilité & Impact</a>
-                <a href="#simulateur">Simulateur Live</a>
-                <a href="#architecture">Architecture</a>
-                <a href="#interieur">Maquette & Flux</a>
-                <a href="#equipe">Équipe & Concepteurs</a>
+                <a href="#presentation">Présentation</a>
+                <a href="#fonctionnement">Fonctionnement</a>
+                <a href="#materiels">Matériels</a>
+                <a href="#etapes">8 Étapes</a>
+                <a href="#simulateur">Simulateur</a>
+                <a href="#tests">Validation</a>
+                <a href="#equipe">Équipe</a>
                 <a href="https://github.com/Max-Adis/REGULATEUR-THERMIQUE-CONNECTE" target="_blank" class="btn-github">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
-                    Code GitHub
+                    Dépôt GitHub
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Hero (Mise en Valeur du Projet & Utilité Concrète) -->
+    <!-- Header Hero -->
     <header>
         <div class="container hero-grid">
             <div>
                 <div class="badge-system">
                     <span class="pulse-dot"></span>
-                    <span>Protection Contre la Surchauffe & Domotique</span>
+                    <span>Régulateur Thermique Connecté avec Supervision et Commande Manuelle</span>
                 </div>
-                <h1>Protégez vos espaces avec une <span class="gradient-text">ventilation autonome</span></h1>
+                <h1>Protection intelligente contre la <span class="gradient-text">surchauffe thermique</span></h1>
                 <p class="hero-lead">
-                    <strong>ThermoControl BT</strong> surveille en continu la température de vos locaux, déclenche automatiquement l'extraction d'air dès qu'une surchauffe est détectée et vous permet de reprendre le contrôle à distance depuis votre smartphone.
+                    Une solution automatisée qui mesure la température ambiante en continu, transmet les données en temps réel via Bluetooth et actionne intelligemment un ventilateur en mode automatique ou manuel.
                 </p>
 
                 <div class="hero-pills-row">
                     <div class="hero-pill">
-                        <span class="hero-pill-label">Protection Active</span>
-                        <span class="hero-pill-value">Refroidissement Automatique</span>
+                        <span class="hero-pill-label">Supervision</span>
+                        <span class="hero-pill-value">Bluetooth SPP 9600 Bd</span>
                     </div>
                     <div class="hero-pill">
-                        <span class="hero-pill-label">Supervision Sans Fil</span>
-                        <span class="hero-pill-value">Temps Réel sur Smartphone</span>
+                        <span class="hero-pill-label">Application Dédiée</span>
+                        <span class="hero-pill-value">MIT App Inventor</span>
                     </div>
                     <div class="hero-pill">
-                        <span class="hero-pill-label">Gestion Hybride</span>
-                        <span class="hero-pill-value">Mode Seuil & Forçage Manuel</span>
+                        <span class="hero-pill-label">Pilotage Moteur</span>
+                        <span class="hero-pill-value">Relais Opto-isolé 5V</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 1 : Vue Extérieure -->
+            <!-- Image Hero (Vue Extérieure) -->
             <div class="hero-showcase">
                 <div class="hero-img-card">
-                    <img src="assets/vu_exterieur.jpeg" alt="Vue extérieure de la maquette du projet ThermoControl BT">
+                    <img src="assets/vu_exterieur.jpeg" alt="Vue extérieure du projet ThermoControl BT">
                     <div class="hero-live-badge">
                         <div>
-                            <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Surveillance en Direct</span>
+                            <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Télémétrie en Direct</span>
                             <div class="temp-display-hero" id="heroTempDisplay">31.5 °C</div>
                         </div>
                         <div style="margin-left: 0.5rem; padding-left: 0.85rem; border-left: 2px solid var(--border-color);">
@@ -886,101 +937,321 @@
         </div>
     </header>
 
-    <!-- SECTION UTILITÉ & MISE EN VALEUR CONCRÈTE -->
-    <section id="utilite" class="value-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">À quoi sert ce projet</span>
-                <h2 class="section-title">Une réponse concrète aux défis thermiques</h2>
-                <p style="margin-top: 0.5rem;">
-                    La hausse excessive des températures dégrade les équipements électroniques sensibles, engendre un inconfort humain et peut provoquer d'importantes pertes matérielles. ThermoControl BT apporte une solution automatisée, fiable et sans contrainte.
+    <!-- SECTION 1 & 2 : PRÉSENTATION & OBJECTIFS DU RAPPORT PDF -->
+    <section id="presentation" class="bg-white-sec">
+        <div class="container grid-2">
+            <div>
+                <span class="section-tag">Contexte & Problématique</span>
+                <h2 class="section-title" style="margin-bottom: 1.25rem;">Pourquoi ce système est indispensable ?</h2>
+                <p>
+                    Avec l'essor de l'Internet des Objets (IoT), la régulation thermique est devenue un besoin critique dans les habitations, les salles informatiques, les entreprises, les serres agricoles et les laboratoires.
+                </p>
+                <p>
+                    Une température excessive engendre une diminution des performances des équipements, une surchauffe des composants électroniques, un inconfort pour les occupants et des pertes matérielles substantielles.
+                </p>
+                <p style="font-weight: 600; color: var(--primary-blue);">
+                    Problématique centrale : « Comment réaliser un système simple, économique et connecté permettant de surveiller la température en temps réel et de commander facilement un ventilateur à distance ? »
                 </p>
             </div>
 
-            <div class="value-grid">
-                <!-- Bénéfice 1 -->
-                <div class="value-card">
-                    <div class="value-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Protection 24h/24 des Équipements</h3>
-                    <p>Idéal pour les baies de serveurs, armoires électriques et laboratoires. Le système évacue la chaleur accumulée avant qu'elle n'endommage vos composants vitaux.</p>
-                </div>
+            <div class="card-box">
+                <h3 style="margin-bottom: 0.5rem;">Objectifs du Projet</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Objectifs fixés et validés lors de la réalisation :</p>
+                <ul class="bullet-list">
+                    <li><strong>Mesurer avec précision la température ambiante</strong> à l'aide d'une sonde numérique DHT11.</li>
+                    <li><strong>Transmettre les données par Bluetooth</strong> via le module HC-05 vers un terminal mobile.</li>
+                    <li><strong>Afficher la température sur une application mobile</strong> conçue sous MIT App Inventor.</li>
+                    <li><strong>Commander le ventilateur depuis un smartphone</strong> avec double mode (Auto sur seuil / Manuel forcé).</li>
+                    <li><strong>Assurer un fonctionnement fiable et isolé</strong> grâce à un relais de puissance optocouplé.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <!-- Bénéfice 2 -->
-                <div class="value-card">
-                    <div class="value-icon-box orange">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-                    </div>
-                    <h3>Contrôle Sans Fil sans Déplacement</h3>
-                    <p>Visualisez la température en direct sur votre smartphone et actionnez ou coupez le ventilateur à distance en un seul geste grâce à l'application mobile dédiée.</p>
-                </div>
+    <!-- SECTION 3 : LES 9 ÉTAPES DE FONCTIONNEMENT -->
+    <section id="fonctionnement">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Logique Fonctionnelle</span>
+                <h2 class="section-title">Fonctionnement Détaillé du Système</h2>
+                <p style="margin-top: 0.5rem;">
+                    Le cycle de supervision et d'actionnement s'articule selon 9 étapes coordonnées entre capteurs, microcontrôleur et interface smartphone.
+                </p>
+            </div>
 
-                <!-- Bénéfice 3 -->
-                <div class="value-card">
-                    <div class="value-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
-                    </div>
-                    <h3>Économie d'Énergie Intelligente</h3>
-                    <p>Finie la ventilation continue et énergivore. L'actionneur s'enclenche uniquement lorsque le seuil d'alerte est dépassé et s'éteint dès le retour à la normale.</p>
+            <div class="steps-flow-grid">
+                <div class="flow-step-card">
+                    <div class="flow-step-num">1</div>
+                    <h4>Mesure Ambiante</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Le capteur DHT11 mesure la température ambiante en continu.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">2</div>
+                    <h4>Traitement Arduino</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">La carte Arduino Uno récupère et valide les données numériques.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">3</div>
+                    <h4>Émission Bluetooth</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">La trame de température est envoyée au module Bluetooth HC-05.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">4</div>
+                    <h4>Affichage Smartphone</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">L'application mobile reçoit la valeur et l'affiche en temps réel.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">5</div>
+                    <h4>Ordre Utilisateur / Seuil</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">L'utilisateur appuie sur ON (commande A) ou le seuil automatique est franchi.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">6</div>
+                    <h4>Réception Série</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">L'Arduino reçoit l'ordre sans bloquer grâce à la gestion par millis().</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">7</div>
+                    <h4>Activation Relais</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">L'Arduino passe la broche Pin 3 à l'état LOW pour commuter le relais.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">8</div>
+                    <h4>Ventilation Forcée</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Le moteur CC entraîne l'hélice pour extraire la chaleur.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">9</div>
+                    <h4>Extinction & Veille</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Sur commande OFF (B) ou baisse sous le seuil, le relais se coupe.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SIMULATEUR INTERACTIF EN DIRECT -->
-    <section id="simulateur" class="simulator-section">
+    <!-- SECTION 4 : NOMENCLATURE MATÉRIELLE (TABLEAU DU PDF) -->
+    <section id="materiels" class="bg-white-sec">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Démonstration Fonctionnelle</span>
-                <h2 class="section-title">Simulateur en Temps Réel</h2>
+                <span class="section-tag">Nomenclature du Rapport</span>
+                <h2 class="section-title">Liste des Matériels Utilisés et leur Rôle</h2>
                 <p style="margin-top: 0.5rem;">
-                    Faites varier la température ambiante ou la consigne de seuil pour observer le déclenchement autonome de la ventilation.
+                    Nomenclature officielle détaillée issue de la documentation technique de formation.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center;">
+                <table class="hardware-table">
+                    <thead>
+                        <tr>
+                            <th>Matériel</th>
+                            <th>Rôle & Fonction dans le Projet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arduino Uno</strong></td>
+                            <td>Traite les données et commande l'ensemble du système.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Capteur DHT11</strong></td>
+                            <td>Mesure la température ambiante avec signal numérique calibré.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Module Bluetooth HC-05</strong></td>
+                            <td>Assure la communication sans fil entre l'Arduino et le smartphone.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Module relais 1 canal</strong></td>
+                            <td>Permet de commander le ventilateur sans surcharger l'Arduino (isolation).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ventilateur (hélice + moteur CC)</strong></td>
+                            <td>Refroidit l'environnement lorsque l'utilisateur ou le seuil l'active.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Breadboard</strong></td>
+                            <td>Réalisation du montage prototype sans soudure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fils Jumpers</strong></td>
+                            <td>Assurent les différentes connexions électriques du circuit.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alimentation</strong></td>
+                            <td>Fournit l'énergie nécessaire au système et au moteur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Câble USB Arduino</strong></td>
+                            <td>Permet la programmation du microcontrôleur et l'alimentation PC.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Smartphone Android</strong></td>
+                            <td>Sert d'interface tactile de supervision et de commande à distance.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <div style="background: var(--bg-white); padding: 10px; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                        <img src="assets/composants.png" alt="Photo de l'ensemble des matériels du projet" style="width: 100%; border-radius: 14px; display: block;">
+                        <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-top: 0.6rem; font-weight: 600;">
+                            Photo réelle des matériels et composants utilisés
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 : LES 8 ÉTAPES DE RÉALISATION DU PDF (AVEC PHOTOS) -->
+    <section id="etapes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Processus Complet</span>
+                <h2 class="section-title">Les 8 Étapes de Réalisation du Projet</h2>
+                <p style="margin-top: 0.5rem;">
+                    Détail chronologique et illustré de la mise en œuvre de la conception à la maquette finale.
+                </p>
+            </div>
+
+            <div class="etapes-showcase-grid">
+                <!-- Étape 1 & 2 : Étude & Composants -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/composants.png" alt="Étude du besoin et choix des composants">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étapes 1 & 2</span>
+                        <h3>Étude du Besoin & Choix des Composants</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Analyse des contraintes climatiques : constat d'un manque de supervision dans les systèmes classiques, définition du cahier des charges et sélection ciblée des composants (Arduino Uno, DHT11, HC-05, relais optocouplé).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 3 : Montage sur Breadboard -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/montage_breadboard.png" alt="Montage sur plaque d'essai breadboard">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 3</span>
+                        <h3>Montage sur Breadboard</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Câblage sans soudure du prototype. Connexion du capteur DHT11 sur la broche Pin 2, du relais sur Pin 3, et du module Bluetooth HC-05 sur les broches série logicielles Pin 10 (RX) et Pin 11 (TX).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 4 : Programmation Arduino -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/code_arduino_blocks.png" alt="Programmation Arduino C++">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 4</span>
+                        <h3>Programmation de l'Arduino (C++)</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Développement sous Arduino IDE avec temporisation non-bloquante via <code>millis()</code> (émission toutes les 1000 ms sans bloquer la boucle) et traitement des commandes <code>M1</code>, <code>M0</code>, <code>S&lt;seuil&gt;</code>, <code>A</code> et <code>B</code>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 5 : Application Mobile MIT App Inventor -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/mit_app_inventor_blocks.png" alt="Blocs MIT App Inventor">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 5</span>
+                        <h3>Développement Mobile (ThermoControl BT)</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Création de l'application sous MIT App Inventor : module de sélection Bluetooth Client, potentiomètre tactile de seuil, boutons de commande forcée et affichage numérique de la télémétrie.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 7 : Réalisation de la Maquette -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/realisation_maquette.png" alt="Réalisation et découpe de la maquette">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 7</span>
+                        <h3>Fabrication de la Maquette</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Découpe et assemblage de la structure en carton fort modélisant un local technique. Intégration du ventilateur d'extraction en toiture et fixation des modules électroniques.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 8 : Maquette Finale -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/maquette_vues_completes.png" alt="Présentation de la maquette finale sous tous les angles">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 8</span>
+                        <h3>Présentation de la Maquette Finale</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Finitions esthétiques complètes (façades, toiture, portes d'accès) et validation de la circulation d'air forcée lors de tests grandeur nature en conditions réelles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6 : SIMULATEUR LIVE -->
+    <section id="simulateur" class="bg-white-sec">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testez le système</span>
+                <h2 class="section-title">Simulateur Live en Temps Réel</h2>
+                <p style="margin-top: 0.5rem;">
+                    Ajustez la température ambiante ou la consigne de seuil pour observer le déclenchement immédiat de la ventilation selon le code Arduino.
                 </p>
             </div>
 
             <div class="simulator-panel">
                 <!-- Contrôles -->
                 <div class="sim-controls-group">
-                    <!-- Slider Température -->
                     <div>
                         <div class="sim-row-head">
                             <span class="sim-title-label">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-                                Température Mesurée dans la Pièce
+                                Température Mesurée (Sonde DHT11)
                             </span>
                             <span class="sim-num-badge" id="tempVal">32.0 °C</span>
                         </div>
                         <input type="range" id="tempSlider" min="20" max="45" step="0.5" value="32">
                     </div>
 
-                    <!-- Slider Seuil -->
                     <div>
                         <div class="sim-row-head">
                             <span class="sim-title-label">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--thermal-orange)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                                Seuil Limite de Déclenchement
+                                Seuil Critique de Déclenchement
                             </span>
                             <span class="sim-num-badge orange" id="thresholdVal">31.0 °C</span>
                         </div>
                         <input type="range" id="thresholdSlider" min="25" max="38" step="0.5" value="31">
                     </div>
 
-                    <!-- Sélecteur de Mode -->
                     <div>
-                        <span class="sim-title-label" style="margin-bottom: 0.6rem;">Mode Opérationnel</span>
+                        <span class="sim-title-label" style="margin-bottom: 0.6rem;">Mode de Régulation</span>
                         <div class="mode-switch-box">
-                            <button class="btn-mode active" id="btnModeAuto" onclick="setMode('auto')">Mode Automatique (Seuil)</button>
-                            <button class="btn-mode" id="btnModeManual" onclick="setMode('manual')">Mode Manuel (Application)</button>
+                            <button class="btn-mode active" id="btnModeAuto" onclick="setMode('auto')">Mode Automatique (M1)</button>
+                            <button class="btn-mode" id="btnModeManual" onclick="setMode('manual')">Mode Manuel (M0)</button>
                         </div>
                     </div>
 
-                    <!-- Actions manuelles -->
                     <div id="manualPanel" style="display: none;">
                         <span class="sim-title-label" style="margin-bottom: 0.6rem;">Commandes Tactiles Forcées</span>
                         <div class="manual-btn-group">
-                            <button class="btn-force on" onclick="forceFan(true)">Forcer la Marche (Commande A)</button>
-                            <button class="btn-force off" onclick="forceFan(false)">Forcer l'Arrêt (Commande B)</button>
+                            <button class="btn-force on" onclick="forceFan(true)">Forcer Marche (Commande A)</button>
+                            <button class="btn-force off" onclick="forceFan(false)">Forcer Arrêt (Commande B)</button>
                         </div>
                     </div>
                 </div>
@@ -988,7 +1259,6 @@
                 <!-- Visuel Turbine Animée aux Couleurs du Logo -->
                 <div class="sim-fan-box" id="simVisualBox">
                     <div class="turbine-housing" id="turbineHousing">
-                        <!-- Turbine SVG avec pales Bleues et Orange comme le logo -->
                         <svg class="turbine-svg" viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="14" fill="#ffffff" stroke="var(--primary-blue)" stroke-width="4"/>
                             <circle cx="50" cy="50" r="7" fill="var(--thermal-orange)"/>
@@ -1022,100 +1292,70 @@
         </div>
     </section>
 
-    <!-- ARCHITECTURE TECHNIQUE -->
-    <section id="architecture" style="padding: 4.5rem 0;">
+    <!-- SECTION 7 : ÉTAPE 6 DU PDF — VALIDATION DES TESTS -->
+    <section id="tests">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Ingénierie & Matériel</span>
-                <h2 class="section-title">Fondations Techniques du Système</h2>
+                <span class="section-tag">Étape 6 du Rapport</span>
+                <h2 class="section-title">Tests du Système et Validation Fonctionnelle</h2>
                 <p style="margin-top: 0.5rem;">
-                    Une chaîne électronique pensée pour la robustesse, la sécurité électrique et la réactivité instantanée.
+                    Tableau de validation des 6 fonctions clés testées et approuvées en laboratoire.
                 </p>
             </div>
 
-            <div class="hardware-grid">
-                <!-- 1. Arduino Uno -->
-                <div class="tech-card">
-                    <div class="tech-icon-wrap">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            <div class="test-grid">
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Connexion Bluetooth</div>
+                        <div class="test-desc">L'application se connecte correctement au module HC-05</div>
                     </div>
-                    <h3>Microcontrôleur Central</h3>
-                    <p>Traite les données de température en continu et gère l'exécution des ordres sans blocage temporel pour une réactivité optimale.</p>
+                    <span class="badge-valid">Validé</span>
                 </div>
 
-                <!-- 2. Sonde DHT11 -->
-                <div class="tech-card">
-                    <div class="tech-icon-wrap orange">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Réception de la Température</div>
+                        <div class="test-desc">La valeur affichée correspond à la mesure réelle du DHT11</div>
                     </div>
-                    <h3>Sonde Thermique Dédiée</h3>
-                    <p>Mesure avec précision les variations thermiques de l'environnement pour déclencher la réponse adéquate en temps réel.</p>
+                    <span class="badge-valid">Validé</span>
                 </div>
 
-                <!-- 3. Bluetooth HC-05 -->
-                <div class="tech-card">
-                    <div class="tech-icon-wrap">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 7 10 10-5 5V2l5 5L7 17"/></svg>
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Réglage du Seuil Dynamique</div>
+                        <div class="test-desc">Le curseur modifie le seuil en temps réel sans redémarrage</div>
                     </div>
-                    <h3>Liaison Sans Fil Sécurisée</h3>
-                    <p>Permet la communication directe et autonome entre le boîtier et votre smartphone, sans dépendance à Internet.</p>
+                    <span class="badge-valid">Validé</span>
                 </div>
 
-                <!-- 4. Relais 1 Canal -->
-                <div class="tech-card">
-                    <div class="tech-icon-wrap orange">
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Mode Automatique</div>
+                        <div class="test-desc">Le ventilateur s'active au dépassement et s'arrête en dessous</div>
                     </div>
-                    <h3>Commutation de Puissance</h3>
-                    <p>Isole le circuit de contrôle et pilote le moteur de ventilation pour évacuer les calories excédentaires en toute sécurité.</p>
+                    <span class="badge-valid">Validé</span>
+                </div>
+
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Mode Manuel Forcé</div>
+                        <div class="test-desc">Les boutons Marche / Arrêt commandent directement le ventilateur</div>
+                    </div>
+                    <span class="badge-valid">Validé</span>
+                </div>
+
+                <div class="test-card">
+                    <div>
+                        <div class="test-title">Sécurité des Modes</div>
+                        <div class="test-desc">Une alerte s'affiche si une commande manuelle est tentée en auto</div>
+                    </div>
+                    <span class="badge-valid">Validé</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTÉRIEUR & MAQUETTE (Image 2 : Vue Intérieure) -->
-    <section id="interieur" class="inside-section">
-        <div class="container inside-grid">
-            <!-- Image 2 : Vue Intérieure -->
-            <div class="inside-img-card">
-                <img src="assets/interieur.jpeg" alt="Vue intérieure de la maquette montrant l'agencement interne">
-            </div>
-
-            <div>
-                <span class="section-tag">Conception Physique</span>
-                <h2 class="section-title" style="margin-bottom: 1.5rem;">Intégration et Circulation d'Air</h2>
-                <p style="margin-bottom: 2rem;">
-                    La maquette matérialise une enceinte thermiquement régulée avec un agencement interne optimisé pour une extraction d'air fluide et rapide.
-                </p>
-
-                <div class="feature-item">
-                    <div class="feature-num">1</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.2rem;">Convection Forcée Efficace</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">L'actionneur placé en partie haute évacue la couche d'air chaud par convection naturelle assistée.</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-num">2</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.2rem;">Pilotage Intelligent Double Mode</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">Autonomie complète de régulation par seuil ou reprise en main directe par l'utilisateur.</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-num">3</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.2rem;">Protection Électrique Totale</h4>
-                        <p style="font-size: 0.9rem; margin: 0;">Séparation physique entre la commande basse tension et le circuit d'alimentation motrice.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ÉQUIPE & PARTICIPANTS (En bas de page) -->
+    <!-- SECTION 8 : ÉQUIPE & PARTICIPANTS (EN BAS DE PAGE) -->
     <section id="equipe" class="team-section">
         <div class="container">
             <div class="section-header">
@@ -1127,7 +1367,6 @@
             </div>
 
             <div class="team-grid">
-                <!-- Participant 1 -->
                 <div class="team-card">
                     <div class="avatar-box">FA</div>
                     <div class="team-name">FADONOUGBO Anselme</div>
@@ -1135,7 +1374,6 @@
                     <div class="team-group">Groupe n°5 · Smart Innovators</div>
                 </div>
 
-                <!-- Participant 2 -->
                 <div class="team-card">
                     <div class="avatar-box" style="background: linear-gradient(135deg, var(--thermal-orange), #fb923c);">HT</div>
                     <div class="team-name">HOUNKOKOE Trifène</div>
@@ -1143,7 +1381,6 @@
                     <div class="team-group">Groupe n°5 · Smart Innovators</div>
                 </div>
 
-                <!-- Participant 3 -->
                 <div class="team-card">
                     <div class="avatar-box">KA</div>
                     <div class="team-name">KINDOMISSI Achille</div>
@@ -1155,7 +1392,7 @@
             <div class="academy-box">
                 <h4 style="color: var(--text-title); font-size: 1.25rem; margin-bottom: 0.4rem;">Centre de Formation Max_Adis</h4>
                 <p style="font-size: 0.95rem; max-width: 600px; margin: 0 auto; color: var(--text-body);">
-                    <em>« Crée et contrôle tes propres systèmes intelligents »</em> — Accompagnement pratique du prototype à la réalisation finale.
+                    <em>« Crée et contrôle tes propres systèmes intelligents »</em> — Porto-Novo, Bénin.
                 </p>
             </div>
         </div>
@@ -1165,11 +1402,11 @@
     <footer>
         <div class="container">
             <p style="color: #ffffff; font-weight: 700; margin-bottom: 0.4rem;">ThermoControl BT — Régulateur Thermique Connecté</p>
-            <p>Conçu par Groupe n°5 (Smart Innovators) · Édition 2026</p>
+            <p>Groupe n°5 (Smart Innovators) · Édition 2026 · Centre de Formation Max_Adis</p>
         </div>
     </footer>
 
-    <!-- Logique Interactive & Simulations -->
+    <!-- Logique Interactive du Simulateur -->
     <script>
         const tempSlider = document.getElementById('tempSlider');
         const thresholdSlider = document.getElementById('thresholdSlider');
@@ -1242,20 +1479,6 @@
 
         // Initialisation
         updateSimulation();
-
-        // Effet 3D Tilt au mouvement de la souris
-        document.querySelectorAll('.value-card, .tech-card, .team-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                card.style.transform = `perspective(1000px) rotateX(${-y * 0.05}deg) rotateY(${x * 0.05}deg) translateY(-6px)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)`;
-            });
-        });
     </script>
 </body>
 </html>
