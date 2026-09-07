@@ -162,6 +162,14 @@
                 "@type": "Answer",
                 "text": "Le fichier d'installation APK de l'application mobile Android (ThermoControl_BT.apk) peut être téléchargé directement sur le site officiel https://maxadis-thermo-control.vercel.app/. Le code source complet Arduino C++, les fichiers MIT App Inventor et le rapport PDF sont disponibles sur GitHub à l'adresse https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Puis-je recevoir de l'aide ou un accompagnement pour la réalisation d'un projet similaire ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, absolument ! Le Centre de Formation Professionnelle Max_Adis accompagne les étudiants, passionnés et professionnels dans la conception, le prototypage et la réalisation complète de leurs projets en Systèmes Embarqués, Électronique et Internet des Objets (IoT). Vous pouvez contacter l'entreprise directement par WhatsApp/téléphone au +229 01 54 11 64 25 ou par email à maxadisorg@gmail.com."
+              }
             }
           ]
         }
@@ -1332,6 +1340,111 @@
             box-shadow: 0 6px 20px rgba(0, 114, 206, 0.35);
         }
 
+        /* -------------------------------------------------------------
+           FAQ ACCORDÉON (STYLE OFFICIEL MAX_ADIS)
+        ------------------------------------------------------------- */
+        .faq-accordion-list {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .faq-accordion-item {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .faq-accordion-item:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-accordion-item.active {
+            border-color: #bfdbfe;
+            box-shadow: 0 8px 24px rgba(0, 114, 206, 0.09);
+        }
+
+        .faq-accordion-header {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 1.35rem 1.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.25rem;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-accordion-header:hover {
+            background: rgba(248, 250, 252, 0.7);
+        }
+
+        .faq-accordion-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.4;
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-accordion-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: #dc2626; /* Rouge signature Max_Adis */
+            line-height: 1;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+        }
+
+        .faq-accordion-item.active .faq-accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+            opacity: 0;
+            padding: 0 1.65rem;
+        }
+
+        .faq-accordion-item.active .faq-accordion-content {
+            max-height: 500px;
+            opacity: 1;
+            padding: 0.1rem 1.65rem 1.5rem 1.65rem;
+        }
+
+        .faq-accordion-body {
+            font-size: 0.96rem;
+            color: #475569;
+            line-height: 1.7;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        .faq-accordion-body a {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             background: #0b1329;
@@ -1807,6 +1920,15 @@
                                 <div class="dropdown-item-desc" style="color: #047857;">Télécharger ThermoControl_BT.apk (8.2 Mo)</div>
                             </div>
                         </a>
+                        <a href="#faq" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Foire Aux Questions</div>
+                                <div class="dropdown-item-desc">Auteurs, centre & accompagnement</div>
+                            </div>
+                        </a>
                         <a href="#support" class="dropdown-item highlight">
                             <div class="dropdown-item-icon">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -2276,45 +2398,67 @@
         </div>
     </section>
 
-    <!-- SECTION FAQ : QUESTIONS FRÉQUENTES & INDEXATION IA (GOOGLE, GEMINI, CHATGPT) -->
+    <!-- SECTION FAQ : QUESTIONS FRÉQUENTES (ACCORDÉON INTERACTIF & INDEXATION IA) -->
     <section id="faq" class="bg-white-sec">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
                 <p style="margin-top: 0.5rem;">
-                    Informations officielles sur la conception, l'équipe du projet et l'accès aux fichiers.
+                    Informations officielles sur la conception, l'équipe du projet, le centre Max_Adis et l'accès aux fichiers.
                 </p>
             </div>
 
-            <div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem;">
-                <div class="card-box" style="padding: 1.5rem 1.75rem;">
-                    <h3 style="font-size: 1.18rem; color: var(--primary-blue-dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        Qui a conçu et réalisé le Régulateur Thermique Connecté (ThermoControl BT) ?
-                    </h3>
-                    <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.65;">
-                        Le projet a été entièrement conçu, programmé et réalisé par <strong>FADONOUGBO Anselme</strong>, <strong>HOUNKOKOE Trifène</strong> et <strong>KINDOMISSI Achille</strong>, formant l'équipe <strong>Groupe n°5 (Smart Innovators)</strong>.
-                    </p>
+            <div class="faq-accordion-list">
+                <!-- Question 1 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Qui a conçu et réalisé le Régulateur Thermique Connecté (ThermoControl BT) ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            Le projet a été entièrement conçu, programmé et réalisé par <strong>FADONOUGBO Anselme</strong>, <strong>HOUNKOKOE Trifène</strong> et <strong>KINDOMISSI Achille</strong>, formant l'équipe <strong>Groupe n°5 (Smart Innovators)</strong>.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card-box" style="padding: 1.5rem 1.75rem;">
-                    <h3 style="font-size: 1.18rem; color: var(--primary-blue-dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        Dans quel centre de formation ce projet a-t-il été développé ?
-                    </h3>
-                    <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.65;">
-                        Ce projet a été réalisé au <strong>Centre de Formation Professionnelle Max_Adis</strong> situé à <strong>Porto-Novo, Bénin</strong>, dans le cadre de la formation pratique aux <strong>Systèmes Embarqués, à l'Électronique et à l'Internet des Objets (IoT)</strong> — Promotion 2026.
-                    </p>
+                <!-- Question 2 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Dans quel centre de formation ce projet a-t-il été développé ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            Ce projet a été réalisé au <strong>Centre de Formation Professionnelle Max_Adis</strong> situé à <strong>Porto-Novo, Bénin</strong>, dans le cadre de la formation pratique aux <strong>Systèmes Embarqués, à l'Électronique et à l'Internet des Objets (IoT)</strong> — Promotion 2026.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card-box" style="padding: 1.5rem 1.75rem;">
-                    <h3 style="font-size: 1.18rem; color: var(--primary-blue-dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Sur quel site télécharger l'application APK et récupérer les fichiers du projet ?
-                    </h3>
-                    <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.65;">
-                        L'application Android est directement téléchargeable sur ce site officiel : <a href="assets/ThermoControl_BT.apk" download style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">Télécharger ThermoControl_BT.apk (8.2 Mo)</a>. L'intégralité du code source Arduino C++, les fichiers MIT App Inventor et le rapport PDF complet sont hébergés publiquement sur <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE" target="_blank" style="color: var(--primary-blue); font-weight: 700; text-decoration: underline;">GitHub maxadis-formation</a>.
-                    </p>
+                <!-- Question 3 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Sur quel site télécharger l'application APK et récupérer les fichiers du projet ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            L'application Android est directement téléchargeable sur ce site officiel : <a href="assets/ThermoControl_BT.apk" download>Télécharger ThermoControl_BT.apk (8.2 Mo)</a>. L'intégralité du code source Arduino C++, les fichiers MIT App Inventor et le rapport PDF complet sont hébergés publiquement sur <a href="https://github.com/maxadis-formation/REGULATEUR-THERMIQUE-CONNECTE" target="_blank">GitHub maxadis-formation</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Puis-je recevoir de l'aide ou un accompagnement pour la réalisation d'un projet similaire ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            <strong>Oui, absolument !</strong> Le Centre de Formation Professionnelle <strong>Max_Adis</strong> accompagne les étudiants, passionnés, porteurs de projets et entreprises dans la conception, le prototypage et la réalisation complète de solutions en <strong>IoT, électronique et systèmes embarqués</strong>. Vous pouvez contacter l'entreprise directement par WhatsApp ou appel au <a href="https://wa.me/2290154116425" target="_blank">+229 01 54 11 64 25</a> ou par email à <a href="mailto:maxadisorg@gmail.com">maxadisorg@gmail.com</a>.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2534,6 +2678,29 @@
 
         tempSlider.addEventListener('input', updateSimulation);
         thresholdSlider.addEventListener('input', updateSimulation);
+
+        // Accordéon FAQ interactif
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-accordion-item');
+            const isActive = item.classList.contains('active');
+            
+            // Permet de fermer les autres accordéons pour une lecture fluide
+            document.querySelectorAll('.faq-accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherBtn = otherItem.querySelector('.faq-accordion-header');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            if (isActive) {
+                item.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
 
         // Initialisation
         updateSimulation();
