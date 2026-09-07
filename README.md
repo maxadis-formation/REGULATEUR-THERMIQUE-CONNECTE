@@ -32,12 +32,13 @@ Ce projet consiste à concevoir un système capable de mesurer la température a
 
 ```text
 📁 REGULATEUR-THERMIQUE-CONNECTE/
-├── 📁 assets/       # Ressources multimédias, schémas normalisés & photos
-├── 📁 docs/         # Rapport PDF officiel & cahier des charges
-├── 📁 firmware/     # Code source embarqué Arduino (.ino)
-├── 📄 .gitignore    # Fichiers ignorés standard
-├── 📄 index.html    # Site web vitrine & simulateur interactif (déploiement Vercel)
-└── 📄 README.md     # Documentation technique complète
+├── 📁 assets/                 # Ressources multimédias, APK Android & photos
+│   └── 📱 ThermoControl_BT.apk # Application mobile prête à installer (Android)
+├── 📁 docs/                   # Rapport PDF officiel & cahier des charges
+├── 📁 firmware/               # Code source embarqué Arduino (.ino)
+├── 📄 .gitignore              # Fichiers ignorés standard
+├── 📄 index.html              # Site web vitrine & simulateur interactif (déploiement Vercel)
+└── 📄 README.md               # Documentation technique complète
 ```
 
 ---
@@ -181,6 +182,14 @@ void loop() {
     </tr>
   </table>
 </div>
+
+#### 📲 Téléchargement & Installation de l'Application Mobile (Android)
+* **Fichier APK :** [**`assets/ThermoControl_BT.apk`**](assets/ThermoControl_BT.apk) (8.2 Mo)
+* **Procédure d'installation :**
+  1. Téléchargez le fichier `.apk` sur votre smartphone Android.
+  2. Autorisez l'installation d'applications issues de sources inconnues si demandé.
+  3. Activez le Bluetooth de votre téléphone et appairez-le au module **HC-05** (Code PIN par défaut : `1234` ou `0000`).
+  4. Lancez **ThermoControl BT**, cliquez sur le sélecteur Bluetooth et choisissez le module **HC-05** pour démarrer la télémétrie en temps réel.
 
 ---
 
