@@ -278,9 +278,9 @@ void loop() {
 ## 12. Équipe du Projet & Mentions Légales
 
 Projet réalisé par le **Groupe n°5 de la vague 1 (Smart Innovators)** :
-* **FADONOUGBO Anselme**
-* **HOUNKOKOE Trifène**
-* **KINDOMISSI Achille**
+* **FADONOUGBO Anselme** — Étudiant en GE
+* **HOUNKOKOE Trifène** — Étudiante en GE
+* **KINDOMISSI Achille** — Lycéen en EL
 
 * **Organisation & Mentorat :** Centre de formation **Max_Adis** (*« Crée et contrôle tes propres systèmes intelligents »*) — Édition 2026.
 * **Lieu :** Porto-Novo, Bénin.
