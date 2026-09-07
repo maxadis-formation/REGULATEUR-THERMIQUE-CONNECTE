@@ -43,7 +43,7 @@
             --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
             --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
             --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
-            --shadow-hero: 0 25px 50px -12px rgba(0, 114, 206, 0.18);
+            --shadow-hero: 0 25px 50px -12px rgba(0, 114, 206, 0.16);
         }
 
         * {
@@ -60,9 +60,9 @@
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.06) 0%, transparent 40%),
-                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.04) 0%, transparent 40%),
-                radial-gradient(circle at 50% 85%, rgba(0, 114, 206, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(0, 114, 206, 0.04) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
@@ -79,16 +79,18 @@
             padding: 0 2rem;
         }
 
-        /* BARRE DE NAVIGATION */
+        /* -------------------------------------------------------------
+           BARRE DE NAVIGATION ÉPURÉE & AÉRÉE (STYLE MINIMALISTE)
+        ------------------------------------------------------------- */
         .navbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
-            padding: 0.9rem 0;
+            padding: 1.1rem 0;
             transition: all 0.3s ease;
         }
 
@@ -101,7 +103,7 @@
         .brand-logo {
             display: flex;
             align-items: center;
-            gap: 0.85rem;
+            gap: 0.95rem;
             text-decoration: none;
             color: var(--text-title);
         }
@@ -110,9 +112,9 @@
             width: 44px;
             height: 44px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 2px solid var(--primary-blue);
-            box-shadow: 0 4px 12px rgba(0, 114, 206, 0.18);
+            box-shadow: 0 4px 12px rgba(0, 114, 206, 0.16);
             transition: transform 0.4s ease;
         }
 
@@ -128,7 +130,7 @@
         .brand-name {
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.28rem;
             letter-spacing: -0.02em;
             color: var(--text-title);
             line-height: 1.15;
@@ -143,20 +145,20 @@
             font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.6rem;
+            gap: 2rem;
         }
 
         .nav-links a {
             color: var(--text-body);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             transition: color 0.2s ease;
         }
 
@@ -170,31 +172,33 @@
             gap: 0.55rem;
             background: linear-gradient(135deg, var(--primary-blue), #0284c7);
             color: #ffffff !important;
-            padding: 0.6rem 1.3rem;
+            padding: 0.6rem 1.35rem;
             border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 4px 14px rgba(0, 114, 206, 0.25);
+            box-shadow: 0 4px 14px rgba(0, 114, 206, 0.22);
             transition: all 0.25s ease;
         }
 
         .btn-github:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.35);
+            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.32);
             background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
         }
 
-        /* HERO SECTION */
+        /* -------------------------------------------------------------
+           HERO SECTION ÉPURÉE, AÉRÉE & DISTINCTE (SANS SURCHARGE)
+        ------------------------------------------------------------- */
         .hero-section {
-            padding: 4.5rem 0 3.5rem 0;
+            padding: 5rem 0 4rem 0;
             position: relative;
         }
 
         .hero-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 3.5rem;
+            gap: 4rem;
             align-items: center;
         }
 
@@ -207,17 +211,17 @@
             font-size: 0.82rem;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             color: var(--primary-blue);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
         }
 
         .hero-title {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.035em;
             color: var(--text-title);
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             line-height: 1.15;
         }
 
@@ -228,25 +232,18 @@
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-blue-dark);
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .hero-lead {
-            font-size: 1.05rem;
+            font-size: 1.25rem;
+            font-weight: 500;
             color: var(--text-body);
-            margin-bottom: 2rem;
-            line-height: 1.7;
+            margin-bottom: 2.25rem;
+            line-height: 1.6;
+            max-width: 540px;
         }
 
         .hero-actions {
             display: flex;
-            gap: 1.15rem;
+            gap: 1.25rem;
             align-items: center;
-            margin-bottom: 2.5rem;
         }
 
         .btn-hero-primary {
@@ -255,18 +252,18 @@
             gap: 0.6rem;
             background: linear-gradient(135deg, var(--primary-blue), #0284c7);
             color: #ffffff;
-            padding: 0.85rem 1.75rem;
-            border-radius: 12px;
+            padding: 0.95rem 1.9rem;
+            border-radius: 14px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             text-decoration: none;
-            box-shadow: 0 8px 20px rgba(0, 114, 206, 0.25);
+            box-shadow: 0 8px 22px rgba(0, 114, 206, 0.25);
             transition: all 0.25s ease;
         }
 
         .btn-hero-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(0, 114, 206, 0.35);
+            box-shadow: 0 12px 28px rgba(0, 114, 206, 0.35);
         }
 
         .btn-hero-secondary {
@@ -276,10 +273,10 @@
             background: var(--bg-white);
             color: var(--text-title);
             border: 1px solid var(--border-color);
-            padding: 0.85rem 1.6rem;
-            border-radius: 12px;
+            padding: 0.95rem 1.75rem;
+            border-radius: 14px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             text-decoration: none;
             box-shadow: var(--shadow-subtle);
             transition: all 0.25s ease;
@@ -291,32 +288,6 @@
             transform: translateY(-2px);
         }
 
-        .hero-features-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .hero-feature-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-feature-title {
-            font-size: 0.88rem;
-            font-weight: 800;
-            color: var(--text-title);
-            margin-bottom: 0.15rem;
-        }
-
-        .hero-feature-desc {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
         /* Showcase Image Hero Propre */
         .hero-showcase {
             position: relative;
@@ -325,7 +296,7 @@
         .hero-img-frame {
             background: #ffffff;
             padding: 10px;
-            border-radius: 24px;
+            border-radius: 26px;
             border: 1px solid var(--sky-blue-border);
             box-shadow: var(--shadow-hero);
             transition: transform 0.3s ease;
@@ -337,13 +308,54 @@
 
         .hero-img-frame img {
             width: 100%;
-            height: 400px;
+            height: 390px;
             object-fit: cover;
-            border-radius: 16px;
+            border-radius: 18px;
             display: block;
         }
 
-        /* CADRE IDENTITE TECHNIQUE */
+        /* -------------------------------------------------------------
+           BOUTON RETOUR EN HAUT FLOTTANT (STYLE MINIMALISTE CIRCULAIRE)
+        ------------------------------------------------------------- */
+        .btn-scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1.5px solid #0f172a;
+            color: #0f172a;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .btn-scroll-top:hover {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* -------------------------------------------------------------
+           CADRE STRUCTURÉ DE L'IDENTITÉ TECHNIQUE DU PROJET
+        ------------------------------------------------------------- */
         .project-identity-section {
             padding: 1rem 0 3.5rem 0;
         }
@@ -442,7 +454,7 @@
             margin-top: 0.2rem;
         }
 
-        /* SECTIONS GENERALES */
+        /* SECTIONS GÉNÉRALES */
         section {
             padding: 5rem 0;
         }
@@ -1135,19 +1147,26 @@
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.35rem; }
+            .hero-title { font-size: 2.4rem; }
             .nav-links { display: none; }
             .hero-actions { flex-direction: column; width: 100%; }
             .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
-            .hero-features-row { grid-template-columns: 1fr; }
             .hero-img-frame img { height: 280px; }
             .simulator-panel { padding: 1.5rem; }
+            .btn-scroll-top { bottom: 1.25rem; right: 1.25rem; width: 42px; height: 42px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRE DE NAVIGATION MODERNE & ÉPURÉE -->
+    <!-- BOUTON REVENIR EN HAUT FLOTTANT -->
+    <button id="btnScrollTop" class="btn-scroll-top" onclick="scrollToTop()" title="Revenir en haut" aria-label="Revenir en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- BARRE DE NAVIGATION MODERNE & AÉRÉE -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand-logo">
@@ -1177,17 +1196,14 @@
         </div>
     </nav>
 
-    <!-- EN-TÊTE / HERO SECTION ÉPURÉE & HAUT DE GAMME -->
+    <!-- EN-TÊTE / HERO SECTION ÉPURÉE & ÉLÉGANTE -->
     <header class="hero-section">
         <div class="container hero-grid">
             <div class="hero-text-col">
                 <div class="hero-eyebrow">Ingénierie des Systèmes Embarqués & IoT</div>
                 <h1 class="hero-title">Régulateur Thermique <span>Connecté</span></h1>
                 <p class="hero-subtitle">
-                    Supervision thermique continue et régulation automatique de ventilation par liaison Bluetooth.
-                </p>
-                <p class="hero-lead">
-                    Une solution automatisée qui mesure la température ambiante en temps réel, active le refroidissement dès dépassement du seuil critique et permet un pilotage forcé direct depuis un smartphone Android.
+                    Supervision continue de la température et régulation automatique de ventilation via liaison Bluetooth.
                 </p>
 
                 <div class="hero-actions">
@@ -1200,25 +1216,9 @@
                         Les 8 Étapes du Projet
                     </a>
                 </div>
-
-                <!-- 3 Indicateurs Clés Intégrés Proprement -->
-                <div class="hero-features-row">
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-title">Sonde Numérique DHT11</div>
-                        <div class="hero-feature-desc">Mesure continue de la température ambiante</div>
-                    </div>
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-title">Relais Optocouplé</div>
-                        <div class="hero-feature-desc">Commutation isolée du moteur de ventilation</div>
-                    </div>
-                    <div class="hero-feature-item">
-                        <div class="hero-feature-title">App MIT Inventor</div>
-                        <div class="hero-feature-desc">Supervision et contrôle sans fil via HC-05</div>
-                    </div>
-                </div>
             </div>
 
-            <!-- Showcase Image Hero Propre (Sans Bulles ni Badges Superposés) -->
+            <!-- Showcase Image Hero Propre -->
             <div class="hero-showcase">
                 <div class="hero-img-frame">
                     <img src="assets/vu_exterieur.jpeg" alt="Vue d'ensemble de la maquette du régulateur thermique connecté">
@@ -1811,8 +1811,26 @@
         </div>
     </footer>
 
-    <!-- Logique Interactive du Simulateur -->
+    <!-- Logique Interactive du Simulateur & Bouton Retour en Haut -->
     <script>
+        // Bouton Revenir en Haut
+        const btnScrollTop = document.getElementById('btnScrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnScrollTop.classList.add('visible');
+            } else {
+                btnScrollTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Simulateur Live
         const tempSlider = document.getElementById('tempSlider');
         const thresholdSlider = document.getElementById('thresholdSlider');
         const tempVal = document.getElementById('tempVal');
