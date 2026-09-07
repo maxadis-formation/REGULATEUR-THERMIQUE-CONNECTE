@@ -23,6 +23,18 @@ Avec les progrès de l'électronique et de l'Internet des Objets (IoT), il devie
 
 Ce projet consiste à concevoir un système capable de mesurer la température ambiante grâce à un capteur **DHT11**, d'afficher cette température sur une application mobile via **Bluetooth HC-05** et de permettre la commande automatique ou manuelle d'un ventilateur. Le système est basé sur une carte **Arduino Uno** qui traite les informations du capteur et pilote un **relais 1 canal** commandant un ventilateur. Une application mobile développée avec **MIT App Inventor** permet à l'utilisateur de superviser la température en temps réel et d'allumer ou d'éteindre le ventilateur.
 
+### Arborescence du Dépôt
+
+```text
+📁 REGULATEUR-THERMIQUE-CONNECTE/
+├── 📁 assets/       # Ressources multimédias, schémas normalisés & photos
+├── 📁 docs/         # Rapport PDF officiel & cahier des charges
+├── 📁 firmware/     # Code source embarqué Arduino (.ino)
+├── 📄 .gitignore    # Fichiers ignorés standard
+├── 📄 index.html    # Site web vitrine & simulateur interactif (déploiement Vercel)
+└── 📄 README.md     # Documentation technique complète
+```
+
 ---
 
 ## 2. Problématique du Projet
@@ -95,7 +107,7 @@ Le système fonctionne selon les 9 étapes coordonnées suivantes :
 * **Langage utilisé :** C/C++ (Arduino IDE)
 * **Application mobile :** *ThermoControl BT* réalisée avec MIT App Inventor
 
-### Code Source Arduino (`CODE_FINAL.ino`)
+### Code Source Arduino ([`firmware/CODE_FINAL.ino`](firmware/CODE_FINAL.ino))
 Le programme utilise `millis()` (gestion du temps non-bloquante) au lieu de `delay(1000)` afin de garantir que l'Arduino reste réactif en permanence pour recevoir immédiatement les commandes Bluetooth `A` ou `B`.
 
 ```cpp

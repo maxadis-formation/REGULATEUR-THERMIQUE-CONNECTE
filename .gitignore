@@ -1,0 +1,11 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+
+# Vercel deployment cache
+.vercel
