@@ -10,16 +10,17 @@
     <meta name="author" content="Groupe 5 (Smart Innovators) - Max_Adis">
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 
-    <!-- Typographie Moderne Google Fonts -->
+    <!-- Typographie Professionnelle Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Palette Dérivée du Logo */
+            /* Palette Dérivée du Logo Max_Adis */
             --primary-blue: #0072CE;
-            --primary-blue-dark: #00569e;
+            --primary-blue-hover: #005bb5;
+            --primary-blue-dark: #00458a;
             --sky-blue: #38bdf8;
             --sky-blue-light: #f0f9ff;
             --sky-blue-border: #bae6fd;
@@ -37,9 +38,12 @@
             --text-muted: #64748b;
             
             --border-color: #e2e8f0;
-            --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
-            --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-            --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.16), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            --border-light: #f1f5f9;
+            
+            --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            --shadow-hero: 0 25px 50px -12px rgba(0, 114, 206, 0.18);
         }
 
         * {
@@ -56,9 +60,9 @@
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
             background-image: 
-                radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 90% 40%, rgba(249, 115, 22, 0.06) 0%, transparent 45%),
-                radial-gradient(circle at 50% 90%, rgba(0, 114, 206, 0.06) 0%, transparent 50%);
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(0, 114, 206, 0.05) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
@@ -75,16 +79,16 @@
             padding: 0 2rem;
         }
 
-        /* Navbar Épurée & Professionnelle */
+        /* BARRE DE NAVIGATION */
         .navbar {
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
-            padding: 0.85rem 0;
+            padding: 0.9rem 0;
             transition: all 0.3s ease;
         }
 
@@ -100,18 +104,15 @@
             gap: 0.85rem;
             text-decoration: none;
             color: var(--text-title);
-            font-weight: 800;
-            font-size: 1.35rem;
-            letter-spacing: -0.02em;
         }
 
         .brand-logo img {
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid var(--primary-blue);
-            box-shadow: 0 4px 10px rgba(0, 114, 206, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 114, 206, 0.18);
             transition: transform 0.4s ease;
         }
 
@@ -119,10 +120,36 @@
             transform: rotate(180deg) scale(1.05);
         }
 
+        .brand-text-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            color: var(--text-title);
+            line-height: 1.15;
+        }
+
+        .brand-name span {
+            color: var(--primary-blue);
+        }
+
+        .brand-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.75rem;
+            gap: 1.6rem;
         }
 
         .nav-links a {
@@ -143,10 +170,11 @@
             gap: 0.55rem;
             background: linear-gradient(135deg, var(--primary-blue), #0284c7);
             color: #ffffff !important;
-            padding: 0.55rem 1.25rem;
+            padding: 0.6rem 1.3rem;
             border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 700;
+            text-decoration: none;
             box-shadow: 0 4px 14px rgba(0, 114, 206, 0.25);
             transition: all 0.25s ease;
         }
@@ -157,16 +185,16 @@
             background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
         }
 
-        /* Hero Section Épurée & Moderne */
-        header {
-            padding: 5rem 0 4.5rem 0;
+        /* HERO SECTION */
+        .hero-section {
+            padding: 4.5rem 0 3.5rem 0;
             position: relative;
         }
 
         .hero-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 4rem;
+            gap: 3.5rem;
             align-items: center;
         }
 
@@ -175,24 +203,40 @@
             flex-direction: column;
         }
 
-        h1 {
+        .hero-eyebrow {
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-title {
             font-size: 3.2rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin-bottom: 0.85rem;
             color: var(--text-title);
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1.25rem;
+            color: var(--primary-blue-dark);
+            margin-bottom: 1rem;
             line-height: 1.5;
         }
 
         .hero-lead {
-            font-size: 1.08rem;
+            font-size: 1.05rem;
             color: var(--text-body);
             margin-bottom: 2rem;
             line-height: 1.7;
@@ -200,14 +244,15 @@
 
         .hero-actions {
             display: flex;
-            gap: 1.25rem;
+            gap: 1.15rem;
             align-items: center;
+            margin-bottom: 2.5rem;
         }
 
         .btn-hero-primary {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             background: linear-gradient(135deg, var(--primary-blue), #0284c7);
             color: #ffffff;
             padding: 0.85rem 1.75rem;
@@ -227,11 +272,11 @@
         .btn-hero-secondary {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             background: var(--bg-white);
             color: var(--text-title);
             border: 1px solid var(--border-color);
-            padding: 0.85rem 1.5rem;
+            padding: 0.85rem 1.6rem;
             border-radius: 12px;
             font-weight: 700;
             font-size: 0.95rem;
@@ -246,79 +291,158 @@
             transform: translateY(-2px);
         }
 
-        /* Image Hero Propre (Sans Bulles ni Badges Superposés) */
+        .hero-features-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .hero-feature-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-feature-title {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--text-title);
+            margin-bottom: 0.15rem;
+        }
+
+        .hero-feature-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Showcase Image Hero Propre */
         .hero-showcase {
             position: relative;
         }
 
-        .hero-img-card {
-            background: var(--bg-white);
-            padding: 8px;
-            border-radius: 20px;
+        .hero-img-frame {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 24px;
             border: 1px solid var(--sky-blue-border);
-            box-shadow: var(--shadow-card-hover);
-            animation: floatHero 5s ease-in-out infinite;
+            box-shadow: var(--shadow-hero);
+            transition: transform 0.3s ease;
         }
 
-        @keyframes floatHero {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+        .hero-img-frame:hover {
+            transform: translateY(-4px);
         }
 
-        .hero-img-card img {
+        .hero-img-frame img {
             width: 100%;
-            height: 380px;
+            height: 400px;
             object-fit: cover;
-            border-radius: 14px;
+            border-radius: 16px;
             display: block;
         }
 
-        /* Cadre Officiel du Thème (En bas du Hero / début de présentation) */
-        .project-formal-card {
-            background: var(--sky-blue-light);
-            border: 1px solid var(--sky-blue-border);
-            border-radius: 16px;
-            padding: 1.5rem 1.75rem;
-            margin-bottom: 3.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            box-shadow: var(--shadow-subtle);
+        /* CADRE IDENTITE TECHNIQUE */
+        .project-identity-section {
+            padding: 1rem 0 3.5rem 0;
         }
 
-        .formal-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+        .project-identity-card {
             background: #ffffff;
+            border: 1px solid var(--sky-blue-border);
+            border-radius: 20px;
+            padding: 2rem 2.25rem;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-identity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-blue), var(--sky-blue));
+        }
+
+        .identity-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .identity-title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .identity-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--sky-blue-light);
             border: 1px solid var(--sky-blue-border);
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--primary-blue);
             flex-shrink: 0;
         }
 
-        .formal-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--primary-blue);
-            font-weight: 800;
-        }
-
-        .formal-title {
-            font-size: 1.15rem;
+        .identity-main-title {
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--text-title);
-            margin: 0.2rem 0;
         }
 
-        .formal-sub {
-            font-size: 0.88rem;
+        .identity-session-badge {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            padding: 0.35rem 0.85rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .identity-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .identity-item-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             color: var(--text-muted);
+            margin-bottom: 0.35rem;
         }
 
-        /* Sections Générales */
+        .identity-item-val {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-title);
+            line-height: 1.4;
+        }
+
+        .identity-item-sub {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* SECTIONS GENERALES */
         section {
             padding: 5rem 0;
         }
@@ -518,61 +642,24 @@
             border: 1px solid var(--sky-blue-border);
             padding: 0.25rem 0.65rem;
             border-radius: 6px;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.75rem;
             align-self: flex-start;
         }
 
-        /* 5. Validation des Tests */
-        .test-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-            margin-top: 2rem;
+        .etape-body h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
         }
 
-        .test-card {
-            background: var(--bg-white);
-            border: 1px solid #bbf7d0;
-            border-radius: 14px;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 10px rgba(34, 197, 94, 0.05);
-        }
-
-        .test-title {
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: var(--text-title);
-        }
-
-        .test-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .badge-valid {
-            background: #dcfce7;
-            color: #166534;
-            font-weight: 800;
-            font-size: 0.8rem;
-            padding: 0.35rem 0.85rem;
-            border-radius: 999px;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-        }
-
-        /* 6. Simulateur Live */
+        /* 5. Simulateur Interactif */
         .simulator-panel {
             background: var(--bg-white);
-            border: 2px solid var(--sky-blue-border);
+            border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 2.75rem;
-            box-shadow: 0 15px 35px -5px rgba(0, 114, 206, 0.1);
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 3.5rem;
             align-items: center;
         }
@@ -580,14 +667,14 @@
         .sim-controls-group {
             display: flex;
             flex-direction: column;
-            gap: 1.75rem;
+            gap: 2rem;
         }
 
         .sim-row-head {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.65rem;
         }
 
         .sim-title-label {
@@ -600,83 +687,87 @@
         }
 
         .sim-num-badge {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
             font-weight: 800;
-            font-size: 1.35rem;
             color: var(--primary-blue);
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            padding: 0.2rem 0.75rem;
+            border-radius: 8px;
         }
 
         .sim-num-badge.orange {
             color: var(--thermal-orange);
+            background: var(--thermal-orange-light);
+            border-color: var(--thermal-orange-border);
         }
 
         input[type=range] {
-            -webkit-appearance: none;
             width: 100%;
-            height: 10px;
+            height: 8px;
+            border-radius: 5px;
             background: #e2e8f0;
-            border-radius: 6px;
             outline: none;
-            transition: background 0.3s;
+            -webkit-appearance: none;
+            cursor: pointer;
         }
 
         input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 26px;
-            height: 26px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--sky-blue));
+            background: var(--primary-blue);
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 114, 206, 0.4);
+            box-shadow: 0 2px 8px rgba(0, 114, 206, 0.4);
             border: 2px solid #ffffff;
             transition: transform 0.15s ease;
         }
 
         input[type=range]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
         }
 
         .mode-switch-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+            display: flex;
             background: var(--bg-soft);
-            padding: 0.4rem;
+            padding: 4px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
         }
 
         .btn-mode {
-            padding: 0.65rem 1rem;
+            flex: 1;
+            padding: 0.75rem;
             border: none;
-            border-radius: 8px;
             background: transparent;
-            color: var(--text-body);
             font-weight: 700;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .btn-mode.active {
-            background: var(--bg-white);
+            background: #ffffff;
             color: var(--primary-blue);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--sky-blue-border);
+            box-shadow: var(--shadow-subtle);
         }
 
         .manual-btn-group {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
+            margin-top: 0.75rem;
         }
 
         .btn-force {
-            flex: 1;
-            padding: 0.75rem;
+            padding: 0.85rem;
             border-radius: 10px;
             border: 1px solid var(--border-color);
-            background: var(--bg-soft);
-            color: var(--text-title);
+            background: #ffffff;
             font-weight: 700;
             font-size: 0.9rem;
             cursor: pointer;
@@ -762,16 +853,58 @@
 
         .telemetry-tag {
             margin-top: 1.25rem;
-            font-family: monospace;
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.8rem;
             color: var(--text-muted);
             background: #ffffff;
-            padding: 0.4rem 0.85rem;
+            padding: 0.45rem 0.95rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
 
-        /* 7. Section Participants */
+        /* 6. Validation des Tests */
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .test-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .test-title {
+            font-weight: 700;
+            color: var(--text-title);
+            font-size: 1.05rem;
+        }
+
+        .test-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .badge-valid {
+            background: #ecfdf5;
+            color: #059669;
+            border: 1px solid #a7f3d0;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* 7. Section Participants & Équipe */
         .team-section {
             padding: 5.5rem 0 4.5rem 0;
             background: var(--bg-page);
@@ -840,11 +973,12 @@
 
         .academy-box {
             margin-top: 3.5rem;
-            background: var(--sky-blue-light);
-            border: 1px dashed var(--sky-blue-border);
-            border-radius: 18px;
-            padding: 2.25rem;
+            background: #ffffff;
+            border: 1px solid var(--sky-blue-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
             text-align: center;
+            box-shadow: var(--shadow-card);
         }
 
         /* Footer */
@@ -864,28 +998,33 @@
         @media (max-width: 1024px) {
             .steps-flow-grid, .etapes-showcase-grid, .grid-2 { grid-template-columns: 1fr; }
             .hero-grid, .simulator-panel { grid-template-columns: 1fr; gap: 2.5rem; }
+            .identity-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .team-grid { grid-template-columns: 1fr; }
             .test-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.35rem; }
+            .hero-title { font-size: 2.35rem; }
             .nav-links { display: none; }
             .hero-actions { flex-direction: column; width: 100%; }
             .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
-            .hero-img-card img { height: 280px; }
+            .hero-features-row { grid-template-columns: 1fr; }
+            .hero-img-frame img { height: 280px; }
             .simulator-panel { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Barre de Navigation Propre -->
+    <!-- BARRE DE NAVIGATION MODERNE & ÉPURÉE -->
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="brand-logo">
                 <img src="assets/logo.jpg" alt="Logo ThermoControl BT">
-                <span>THERMOCONTROL <span style="color: var(--primary-blue);">BT</span></span>
+                <div class="brand-text-wrap">
+                    <div class="brand-name">THERMOCONTROL <span>BT</span></div>
+                    <div class="brand-tag">Système IoT · Max_Adis</div>
+                </div>
             </a>
 
             <div class="nav-links">
@@ -906,48 +1045,94 @@
         </div>
     </nav>
 
-    <!-- Header Hero Épuré -->
-    <header>
+    <!-- EN-TÊTE / HERO SECTION ÉPURÉE & HAUT DE GAMME -->
+    <header class="hero-section">
         <div class="container hero-grid">
             <div class="hero-text-col">
-                <h1>Régulateur Thermique Connecté</h1>
+                <div class="hero-eyebrow">Ingénierie des Systèmes Embarqués & IoT</div>
+                <h1 class="hero-title">Régulateur Thermique <span>Connecté</span></h1>
                 <p class="hero-subtitle">
-                    Supervision continue de la température et régulation automatique de ventilation via Bluetooth.
+                    Supervision thermique continue et régulation automatique de ventilation par liaison Bluetooth.
                 </p>
                 <p class="hero-lead">
-                    Une solution automatisée qui mesure la température ambiante en temps réel, active le refroidissement dès dépassement du seuil critique et permet un pilotage forcé direct depuis un smartphone.
+                    Une solution automatisée qui mesure la température ambiante en temps réel, active le refroidissement dès dépassement du seuil critique et permet un pilotage forcé direct depuis un smartphone Android.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#simulateur" class="btn-hero-primary">Tester le Simulateur Live</a>
-                    <a href="#etapes" class="btn-hero-secondary">Découvrir les 8 Étapes</a>
+                    <a href="#simulateur" class="btn-hero-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Simulateur Interactif
+                    </a>
+                    <a href="#etapes" class="btn-hero-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Les 8 Étapes du Projet
+                    </a>
+                </div>
+
+                <!-- 3 Indicateurs Clés Intégrés Proprement -->
+                <div class="hero-features-row">
+                    <div class="hero-feature-item">
+                        <div class="hero-feature-title">Sonde Numérique DHT11</div>
+                        <div class="hero-feature-desc">Mesure continue de la température ambiante</div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="hero-feature-title">Relais Optocouplé</div>
+                        <div class="hero-feature-desc">Commutation isolée du moteur de ventilation</div>
+                    </div>
+                    <div class="hero-feature-item">
+                        <div class="hero-feature-title">App MIT Inventor</div>
+                        <div class="hero-feature-desc">Supervision et contrôle sans fil via HC-05</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Image Hero Propre (Sans Badge ni Bulle Superposée) -->
+            <!-- Showcase Image Hero Propre (Sans Bulles ni Badges Superposés) -->
             <div class="hero-showcase">
-                <div class="hero-img-card">
-                    <img src="assets/vu_exterieur.jpeg" alt="Vue extérieure du projet ThermoControl BT">
+                <div class="hero-img-frame">
+                    <img src="assets/vu_exterieur.jpeg" alt="Vue d'ensemble de la maquette du régulateur thermique connecté">
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- CADRE STRUCTURÉ DE L'IDENTITÉ TECHNIQUE DU PROJET -->
+    <div class="project-identity-section">
+        <div class="container">
+            <div class="project-identity-card">
+                <div class="identity-header">
+                    <div class="identity-title-group">
+                        <div class="identity-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div class="identity-main-title">Fiche Technique & Cadre Officiel du Projet</div>
+                    </div>
+                    <div class="identity-session-badge">Promotion 2026 · Vague 1</div>
+                </div>
+
+                <div class="identity-grid">
+                    <div>
+                        <div class="identity-item-label">Thème Officiel</div>
+                        <div class="identity-item-val">Régulateur connecté avec supervision et commande manuelle du ventilateur</div>
+                        <div class="identity-item-sub">Système de régulation thermique asservi par microcontrôleur</div>
+                    </div>
+                    <div>
+                        <div class="identity-item-label">Groupe de Projet</div>
+                        <div class="identity-item-val">Groupe n°5 — Smart Innovators</div>
+                        <div class="identity-item-sub">Fadonougbo A., Hounkokoe T., Kindomissi A.</div>
+                    </div>
+                    <div>
+                        <div class="identity-item-label">Centre de Formation</div>
+                        <div class="identity-item-val">Max_Adis Formation</div>
+                        <div class="identity-item-sub">Porto-Novo, Bénin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SECTION 1 & 2 : PRÉSENTATION & OBJECTIFS DU RAPPORT PDF -->
     <section id="presentation" class="bg-white-sec">
         <div class="container">
-            <!-- Cadre Officiel du Projet (Placé Proprement dans la Présentation) -->
-            <div class="project-formal-card">
-                <div class="formal-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                </div>
-                <div>
-                    <div class="formal-label">Thème Officiel du Projet — Vague 1 (Édition 2026)</div>
-                    <div class="formal-title">Régulateur connecté avec supervision et commande manuelle du ventilateur</div>
-                    <div class="formal-sub">Réalisé par le Groupe n°5 (Smart Innovators) · Centre de Formation Max_Adis</div>
-                </div>
-            </div>
-
             <div class="grid-2">
                 <div>
                     <span class="section-tag">Contexte & Problématique</span>
@@ -1295,7 +1480,8 @@
                     </div>
 
                     <div class="telemetry-tag" id="telemetryFeed">
-                        TX &lt; "32.00\n" | Relais: LOW (ON)
+                        TX &lt; "32.00
+" | Relais: LOW (ON)
                     </div>
                 </div>
             </div>
@@ -1451,12 +1637,12 @@
                 turbineHousing.classList.add('spinning-fan');
                 fanStateBadge.className = 'fan-status-badge active-state';
                 fanStateBadge.innerHTML = '<span>Ventilation Active (ON)</span>';
-                telemetryFeed.innerHTML = `TX &lt; "${currentTemp.toFixed(2)}\\n" | Relais: LOW (ON)`;
+                telemetryFeed.innerHTML = `TX &lt; "${currentTemp.toFixed(2)}\n" | Relais: LOW (ON)`;
             } else {
                 turbineHousing.classList.remove('spinning-fan');
                 fanStateBadge.className = 'fan-status-badge standby-state';
                 fanStateBadge.innerHTML = '<span>Température Stable (OFF)</span>';
-                telemetryFeed.innerHTML = `TX &lt; "${currentTemp.toFixed(2)}\\n" | Relais: HIGH (OFF)`;
+                telemetryFeed.innerHTML = `TX &lt; "${currentTemp.toFixed(2)}\n" | Relais: HIGH (OFF)`;
             }
         }
 
